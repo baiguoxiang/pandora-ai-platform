@@ -46,10 +46,10 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
           <IconComponent className="w-6 h-6 text-white" />
         </div>
         
-        <h3 className="text-white text-lg font-semibold mb-2">{name}</h3>
-        <p className="text-white text-sm leading-relaxed">{description}</p>
+        <h3 className="text-white text-base font-semibold mb-2">{name}</h3>
+        <p className="text-white/80 text-xs leading-relaxed">{description}</p>
         
-        <div className="mt-4 flex items-center gap-2 text-indigo-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-4 flex items-center gap-2 text-indigo-400 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <span>了解更多</span>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

@@ -29,7 +29,7 @@ const HomePage = () => {
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full mb-6">
               <Sparkles className="w-4 h-4 text-yellow-400" />
-              <span className="text-white text-sm">全球领先的AI创业平台</span>
+              <span className="text-white/70 text-xs">全球领先的AI创业平台</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -37,7 +37,7 @@ const HomePage = () => {
               <span className="text-gradient"> 创业未来</span>
             </h1>
             
-            <p className="text-xl text-white mb-10 max-w-2xl mx-auto">
+            <p className="text-base text-white/80 mb-10 max-w-2xl mx-auto">
               潘多拉汇聚全球顶尖AI模型，提供一站式AI创业解决方案。
               无论个人、企业还是政府，都能在这里找到适合的AI赋能路径。
             </p>
@@ -45,13 +45,13 @@ const HomePage = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <Link
                 to="/register"
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition-all glow-effect"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all glow-effect"
               >
                 免费注册，立即体验
               </Link>
               <Link
                 to="/token"
-                className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+                className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
               >
                 浏览AI模型
               </Link>
@@ -61,7 +61,7 @@ const HomePage = () => {
               {stats.map((stat) => (
                 <div key={stat.label} className="text-center">
                   <p className="text-3xl lg:text-4xl font-bold text-gradient mb-1">{stat.value}</p>
-                  <p className="text-white text-sm">{stat.label}</p>
+                  <p className="text-white/60 text-xs">{stat.label}</p>
                 </div>
               ))}
             </div>
@@ -75,7 +75,7 @@ const HomePage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               七大超级平台，覆盖AI创业全场景
             </h2>
-            <p className="text-white max-w-2xl mx-auto">
+            <p className="text-white/70 text-sm max-w-2xl mx-auto">
               一套潘多拉平台，链接全球AI模型和系统，满足您的所有创业需求
             </p>
           </div>
@@ -94,7 +94,7 @@ const HomePage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               为不同用户群体量身定制
             </h2>
-            <p className="text-white max-w-2xl mx-auto">
+            <p className="text-white/70 text-sm max-w-2xl mx-auto">
               无论是个人创业者、企业还是政府，潘多拉都能提供专业的AI解决方案
             </p>
           </div>
@@ -115,7 +115,7 @@ const HomePage = () => {
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   全球AI超级枢纽
                 </h2>
-                <p className="text-white mb-8 leading-relaxed">
+                <p className="text-white/70 text-sm mb-8 leading-relaxed">
                   汇聚·输送·应用，一个平台打通从AI资源到全球生意的全链路。
                   潘多拉将全球顶尖AI模型聚合在一起，为您提供最优质的AI能力支持。
                 </p>
@@ -126,8 +126,8 @@ const HomePage = () => {
                         <item.icon className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="text-white font-semibold text-sm mb-1">{item.title}</h4>
-                        <p className="text-white text-xs">{item.desc}</p>
+                        <h4 className="text-white text-xs font-semibold mb-1">{item.title}</h4>
+                        <p className="text-white/60 text-xs">{item.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -163,20 +163,20 @@ const HomePage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               准备好开启AI创业之旅了吗？
             </h2>
-            <p className="text-white mb-10 max-w-2xl mx-auto">
+            <p className="text-white/70 text-sm mb-10 max-w-2xl mx-auto">
               立即注册，免费体验全球顶尖AI模型，开启您的创业新篇章
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/register"
-                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold rounded-xl hover:opacity-90 transition-all glow-effect flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-sm font-semibold rounded-xl hover:opacity-90 transition-all glow-effect flex items-center justify-center gap-2"
               >
                 立即注册
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 to="/users"
-                className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
+                className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all"
               >
                 了解更多
               </Link>

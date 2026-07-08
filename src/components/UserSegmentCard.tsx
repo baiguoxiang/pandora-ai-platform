@@ -45,8 +45,8 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       </div>
       
       <div className="relative p-6">
-        <h3 className="text-white text-2xl font-bold mb-2">{title}</h3>
-        <p className="text-white text-sm mb-6">{subtitle}</p>
+        <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
+        <p className="text-white/80 text-xs mb-6">{subtitle}</p>
         
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
@@ -56,14 +56,14 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-white text-sm">{feature}</span>
+              <span className="text-white/80 text-xs">{feature}</span>
             </li>
           ))}
         </ul>
         
         <Link
           to="/register"
-          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${color} text-white font-medium rounded-xl hover:opacity-90 transition-opacity`}
+          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${color} text-white text-xs font-medium rounded-xl hover:opacity-90 transition-opacity`}
         >
           {cta}
         </Link>
