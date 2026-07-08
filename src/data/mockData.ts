@@ -154,9 +154,9 @@ export const platforms: Platform[] = [
     description: '提供AI写作、翻译、编程等多种工具，提升工作效率',
     icon: 'Wrench',
     color: 'from-green-500 to-emerald-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20productivity%20tools%20workspace%20with%20coding%20and%20writing%20assistants&image_size=landscape_16_9',
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20tools%20platform%20dashboard%20with%20colorful%20radar%20chart%20showing%20AI%20chat%20writing%20design%20video%20productivity%20marketing%20tools%20icons&image_size=landscape_16_9',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20productivity%20tools%20workspace&image_size=landscape_16_9',
+      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20tools%20platform%20dashboard%20with%20colorful%20radar%20chart&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=programming%20code%20editor%20with%20AI%20assistant&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20translation%20and%20writing%20interface&image_size=landscape_16_9',
     ],
