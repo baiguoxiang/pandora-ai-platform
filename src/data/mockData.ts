@@ -141,9 +141,9 @@ export const platforms: Platform[] = [
     description: '从剧本生成到视频合成，一键完成AI短剧漫剧制作，分发全球',
     icon: 'Film',
     color: 'from-purple-500 to-pink-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20animation%20video%20production%20studio%20with%20digital%20art%20creation&image_size=landscape_16_9',
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20ancient%20Chinese%20woman%20playing%20flute%20with%20white%20spirit%20fox%20mystical%20fantasy%20art%20AI%20generated&image_size=landscape_16_9',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20animation%20video%20production%20studio&image_size=landscape_16_9',
+      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20woman%20playing%20flute%20with%20white%20spirit%20fox&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20digital%20art%20creation&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20generated%20short%20drama%20scene&image_size=landscape_16_9',
     ],
