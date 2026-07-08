@@ -20,30 +20,24 @@ const iconMap: Record<string, LucideIcon> = {
 
 const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
   const IconComponent = iconMap[iconName] || Globe;
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageFailed, setImageFailed] = useState(false);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
       <div className="relative h-40 overflow-hidden">
-        {imageLoaded ? (
+        {!imageFailed && (
           <img
             src={image}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={() => setImageLoaded(false)}
+            onError={() => setImageFailed(true)}
           />
-        ) : (
+        )}
+        {imageFailed && (
           <div className={`w-full h-full bg-gradient-to-br ${color} flex items-center justify-center`}>
             <IconComponent className="w-16 h-16 text-white/40" />
           </div>
         )}
-        <img
-          src={image}
-          alt={name}
-          className="hidden"
-          onLoad={() => setImageLoaded(true)}
-          onError={() => setImageLoaded(false)}
-        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
       </div>
       
