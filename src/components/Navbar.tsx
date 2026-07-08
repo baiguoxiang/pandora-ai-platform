@@ -49,14 +49,14 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-white hover:text-white transition-colors duration-200 text-sm font-medium"
+                className="text-white hover:text-white transition-colors duration-200 text-xs font-medium"
               >
                 {link.name}
               </Link>
             ))}
             <div className="flex items-center gap-2 text-white cursor-pointer hover:text-white transition-colors">
               <Globe className="w-4 h-4" />
-              <span className="text-sm">中文</span>
+              <span className="text-xs">中文</span>
               <ChevronDown className="w-4 h-4" />
             </div>
           </div>
@@ -69,14 +69,14 @@ const Navbar = () => {
                     <User className="w-5 h-5 text-white" />
                   </div>
                   <div className="text-left">
-                    <p className="text-white text-sm font-medium">{user.name}</p>
-                    <p className="text-white text-xs">余额: {user.balance} Token</p>
+                    <p className="text-white text-xs font-medium">{user.name}</p>
+                    <p className="text-white text-[8px]">余额: {user.balance} Token</p>
                   </div>
                   <ChevronDown className="w-4 h-4 text-white" />
                 </div>
                 <button
                   onClick={handleLogout}
-                  className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors"
+                  className="px-4 py-2 text-xs font-medium text-white hover:text-white transition-colors"
                 >
                   退出登录
                 </button>
@@ -85,13 +85,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors"
+                  className="px-4 py-2 text-xs font-medium text-white hover:text-white transition-colors"
                 >
                   登录
                 </Link>
                 <Link
                   to="/register"
-                  className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity"
+                  className="px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-medium rounded-lg hover:opacity-90 transition-opacity"
                 >
                   注册
                 </Link>
@@ -129,8 +129,8 @@ const Navbar = () => {
                       <User className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-white text-sm font-medium">{user.name}</p>
-                      <p className="text-white text-xs">余额: {user.balance} Token</p>
+                      <p className="text-white text-xs font-medium">{user.name}</p>
+                      <p className="text-white text-[8px]">余额: {user.balance} Token</p>
                     </div>
                   </div>
                   <button

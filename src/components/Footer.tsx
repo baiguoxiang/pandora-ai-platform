@@ -40,19 +40,19 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold text-white">潘多拉</span>
             </div>
-            <p className="text-white/70 text-xs mb-4">
+            <p className="text-white/70 text-[8px] mb-4">
               全球领先的AI创业平台，赋能个人创业者、服务企业、链接全球商机。
             </p>
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-white/70 text-xs">
+              <div className="flex items-center gap-2 text-white/70 text-[8px]">
                 <Mail className="w-4 h-4" />
                 <span>19194991443@163.com</span>
               </div>
-              <div className="flex items-center gap-2 text-white/70 text-xs">
+              <div className="flex items-center gap-2 text-white/70 text-[8px]">
                 <Phone className="w-4 h-4" />
                 <span>19194991443</span>
               </div>
-              <div className="flex items-center gap-2 text-white/70 text-xs">
+              <div className="flex items-center gap-2 text-white/70 text-[8px]">
                 <MapPin className="w-4 h-4" />
                 <span>广东省惠州市惠城区水口大道茂森创意园B408</span>
               </div>
@@ -60,13 +60,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs font-semibold mb-4">产品服务</h4>
+            <h4 className="text-white text-[8px] font-semibold mb-4">产品服务</h4>
             <ul className="space-y-2">
               {footerLinks.product.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/70 text-xs hover:text-white transition-colors"
+                    className="text-white/70 text-[8px] hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -76,13 +76,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs font-semibold mb-4">解决方案</h4>
+            <h4 className="text-white text-[8px] font-semibold mb-4">解决方案</h4>
             <ul className="space-y-2">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/70 text-xs hover:text-white transition-colors"
+                    className="text-white/70 text-[8px] hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -92,13 +92,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs font-semibold mb-4">关于公司</h4>
+            <h4 className="text-white text-[8px] font-semibold mb-4">关于公司</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/70 text-xs hover:text-white transition-colors"
+                    className="text-white/70 text-[8px] hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -108,13 +108,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white text-xs font-semibold mb-4">支持帮助</h4>
+            <h4 className="text-white text-[8px] font-semibold mb-4">支持帮助</h4>
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-white/70 text-xs hover:text-white transition-colors"
+                    className="text-white/70 text-[8px] hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -126,17 +126,17 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-white/50 text-xs">
+            <p className="text-white/50 text-[8px]">
               &copy; 2024 潘多拉科技有限公司. 保留所有权利.
             </p>
             <div className="flex items-center gap-6">
-              <Link to="/" className="text-white/50 text-xs hover:text-white transition-colors">
+              <Link to="/" className="text-white/50 text-[8px] hover:text-white transition-colors">
                 服务条款
               </Link>
-              <Link to="/" className="text-white/50 text-xs hover:text-white transition-colors">
+              <Link to="/" className="text-white/50 text-[8px] hover:text-white transition-colors">
                 隐私政策
               </Link>
-              <Link to="/" className="text-white/50 text-xs hover:text-white transition-colors">
+              <Link to="/" className="text-white/50 text-[8px] hover:text-white transition-colors">
                 Cookie政策
               </Link>
             </div>

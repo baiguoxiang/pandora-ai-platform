@@ -1,6 +1,5 @@
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 
 interface UserSegmentCardProps {
   title: string;
@@ -20,24 +19,20 @@ const iconMap: Record<string, LucideIcon> = {
 
 const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
-  const [imageFailed, setImageFailed] = useState(false);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
       <div className="relative h-48 overflow-hidden">
-        {!imageFailed && (
+        <div className={`w-full h-full bg-gradient-to-br ${color}`}>
           <img
             src={image}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={() => setImageFailed(true)}
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
           />
-        )}
-        {imageFailed && (
-          <div className={`w-full h-full bg-gradient-to-br ${color} flex items-center justify-center`}>
-            <IconComponent className="w-20 h-20 text-white/40" />
-          </div>
-        )}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
         <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
           <IconComponent className="w-7 h-7 text-white" />
@@ -45,9 +40,9 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       </div>
       
       <div className="relative p-6">
-        <h3 className="text-white text-xl font-bold mb-2">{title}</h3>
-        <p className="text-white/80 text-xs mb-6">{subtitle}</p>
-        
+        <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
+        <p className="text-white/70 text-[8px] mb-6">{subtitle}</p>
+
         <ul className="space-y-3 mb-8">
           {features.map((feature, index) => (
             <li key={index} className="flex items-start gap-3">
@@ -56,14 +51,14 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <span className="text-white/80 text-xs">{feature}</span>
+              <span className="text-white/70 text-[8px]">{feature}</span>
             </li>
           ))}
         </ul>
-        
+
         <Link
           to="/register"
-          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${color} text-white text-xs font-medium rounded-xl hover:opacity-90 transition-opacity`}
+          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${color} text-white text-[8px] font-medium rounded-xl hover:opacity-90 transition-opacity`}
         >
           {cta}
         </Link>

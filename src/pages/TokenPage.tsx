@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Search, Filter, Zap, Clock, Users, ChevronRight } from 'lucide-react';
 import { aiModels } from '../data/mockData';
 
@@ -39,7 +39,7 @@ const TokenPage = () => {
           <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             AI Token超市
           </h1>
-          <p className="text-white">
+          <p className="text-white text-xs">
             聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户就可以使用全球模型
           </p>
         </div>
@@ -53,7 +53,7 @@ const TokenPage = () => {
                 placeholder="搜索AI模型..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition-colors"
+                className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white text-xs placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition-colors"
               />
             </div>
             <div className="flex items-center gap-2">
@@ -63,7 +63,7 @@ const TokenPage = () => {
                   <button
                     key={category.id ?? 'all'}
                     onClick={() => setSelectedCategory(category.id)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                    className={`px-4 py-2 rounded-lg text-xs font-medium transition-all ${
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white'
                         : 'bg-white/5 text-white hover:bg-white/10'
@@ -100,48 +100,48 @@ const TokenPage = () => {
                       <h2 className="text-3xl font-bold text-white">
                         {aiModels.find((m) => m.id === selectedModel)?.name}
                       </h2>
-                      <p className="text-white">
+                      <p className="text-white text-xs">
                         {aiModels.find((m) => m.id === selectedModel)?.provider}
                       </p>
                     </div>
                   </div>
-                  <p className="text-white mb-6">
+                  <p className="text-white text-xs mb-6">
                     {aiModels.find((m) => m.id === selectedModel)?.description}
                   </p>
                   <div className="flex items-center gap-6 mb-6">
                     <div className="flex items-center gap-2">
                       <Users className="w-5 h-5 text-indigo-400" />
-                      <span className="text-white">
+                      <span className="text-white text-xs">
                         使用量: {formatUsage(aiModels.find((m) => m.id === selectedModel)?.usageCount ?? 0)}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-green-400" />
-                      <span className="text-white">状态: 可用</span>
+                      <span className="text-white text-xs">状态: 可用</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="text-3xl font-bold text-gradient">
                       ${aiModels.find((m) => m.id === selectedModel)?.price}
                     </span>
-                    <span className="text-white">/ 1K tokens</span>
+                    <span className="text-white text-xs">/ 1K tokens</span>
                   </div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6">
                   <h3 className="text-white font-semibold mb-4">快速开始</h3>
                   <div className="space-y-4">
-                    <button className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-xl hover:opacity-90 transition-opacity">
+                    <button className="w-full py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-xs font-medium rounded-xl hover:opacity-90 transition-opacity">
                       立即调用
                     </button>
-                    <button className="w-full py-3 bg-white/10 text-white font-medium rounded-xl border border-white/20 hover:bg-white/15 transition-colors">
+                    <button className="w-full py-3 bg-white/10 text-white text-xs font-medium rounded-xl border border-white/20 hover:bg-white/15 transition-colors">
                       查看API文档
                     </button>
-                    <button className="w-full py-3 bg-white/10 text-white font-medium rounded-xl border border-white/20 hover:bg-white/15 transition-colors">
+                    <button className="w-full py-3 bg-white/10 text-white text-xs font-medium rounded-xl border border-white/20 hover:bg-white/15 transition-colors">
                       免费试用
                     </button>
                   </div>
                   <div className="mt-6 p-4 bg-black/30 rounded-lg">
-                    <p className="text-white text-sm mb-2">示例代码:</p>
+                    <p className="text-white text-xs mb-2">示例代码:</p>
                     <pre className="text-white text-xs overflow-x-auto">
                       {`curl -X POST https://api.panduora.com/v1/chat/completions \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -187,20 +187,20 @@ const TokenPage = () => {
                     } flex items-center justify-center`}>
                       <Zap className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-white text-xs">{model.provider}</span>
+                    <span className="text-white text-[8px]">{model.provider}</span>
                   </div>
                   
                   <h3 className="text-white font-semibold mb-2 group-hover:text-indigo-400 transition-colors">
                     {model.name}
                   </h3>
-                  <p className="text-white text-sm mb-4 line-clamp-2">
+                  <p className="text-white text-xs mb-4 line-clamp-2">
                     {model.description}
                   </p>
                   
                   <div className="flex items-center justify-between">
                     <div>
                       <span className="text-white font-bold">${model.price}</span>
-                      <span className="text-white text-xs">/ 1K</span>
+                      <span className="text-white text-[8px]">/ 1K</span>
                     </div>
                     <div className="flex items-center gap-1 text-white text-xs">
                       <Users className="w-3 h-3" />
@@ -209,7 +209,7 @@ const TokenPage = () => {
                   </div>
                   
                   <div className="mt-4 pt-4 border-t border-white/10">
-                    <span className="text-indigo-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <span className="text-indigo-400 text-xs font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                       了解详情
                       <ChevronRight className="w-4 h-4" />
                     </span>
