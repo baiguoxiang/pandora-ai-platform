@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Eye, EyeOff, ArrowRight, CheckCircle } from 'lucide-react';
 import { useStore } from '../store';
@@ -10,13 +10,14 @@ const RegisterPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [agreed, setAgreed] = useState(false);
   
   const { register } = useStore();
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name || !email || !password || password !== confirmPassword) return;
+    if (!name || !email || !password || password !== confirmPassword || !agreed) return;
     
     setIsLoading(true);
     setTimeout(() => {
@@ -27,10 +28,9 @@ const RegisterPage = () => {
   };
 
   const passwordRequirements = [
-    { text: '至少8个字符', met: password.length >= 8 },
-    { text: '包含大小写字母', met: /[a-z]/.test(password) && /[A-Z]/.test(password) },
+    { text: '至少6个字符', met: password.length >= 6 },
+    { text: '包含字母', met: /[a-zA-Z]/.test(password) },
     { text: '包含数字', met: /[0-9]/.test(password) },
-    { text: '包含特殊字符', met: /[!@#$%^&*(),.?":{}|<>]/.test(password) },
   ];
 
   return (
@@ -132,6 +132,8 @@ const RegisterPage = () => {
             <div className="flex items-start gap-2 mb-6">
               <input
                 type="checkbox"
+                checked={agreed}
+                onChange={(e) => setAgreed(e.target.checked)}
                 className="w-4 h-4 rounded border-gray-600 bg-white/5 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-0 mt-1"
               />
               <span className="text-white text-sm">
@@ -144,9 +146,9 @@ const RegisterPage = () => {
 
             <button
               type="submit"
-              disabled={isLoading || !name || !email || !password || password !== confirmPassword}
+              disabled={isLoading || !name || !email || !password || password !== confirmPassword || !agreed}
               className={`w-full py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
-                isLoading || !name || !email || !password || password !== confirmPassword
+                isLoading || !name || !email || !password || password !== confirmPassword || !agreed
                   ? 'bg-gray-600 text-white cursor-not-allowed'
                   : 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90 glow-effect'
               }`}
