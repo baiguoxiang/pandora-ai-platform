@@ -180,9 +180,9 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20digital%20human%20avatar%20live%20streaming%20with%20customer%20service%20bot&image_size=landscape_16_9',
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=3D%20cartoon%20business%20man%20avatar%20with%20glasses%20wearing%20gray%20suit%20and%20tie%20friendly%20smile%20professional%20portrait%20clean%20background&image_size=landscape_16_9',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20digital%20human%20avatar%20live%20streaming&image_size=landscape_16_9',
+      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=3D%20cartoon%20business%20man%20avatar%20with%20glasses%20suit&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20customer%20service%20AI%20bot&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=automated%20AI%20operations%20dashboard&image_size=landscape_16_9',
     ],
