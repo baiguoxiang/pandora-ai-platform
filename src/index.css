@@ -18,7 +18,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   color: #ffffff !important;
-  background-color: #0A1628 !important;
+  background-color: #000000 !important;
 }
 
 * {
@@ -33,7 +33,7 @@ body {
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #0A1628 0%, #1A365D 50%, #2D1B69 100%);
+  background-color: #000000;
 }
 
 .bg-gradient-card {

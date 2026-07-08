@@ -21,13 +21,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-primary">
-      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#1A2744] to-[#0A1628]" />
-        <img
-          src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20technology%20abstract%20background%20with%20neon%20lights%20digital%20network&image_size=landscape_16_9"
-          alt="AI技术背景"
-          className="absolute inset-0 w-full h-full object-cover opacity-20"
-        />
+      <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden bg-black">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse-slow" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '2s' }} />
 
