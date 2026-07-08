@@ -1,4 +1,5 @@
-﻿import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
+import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
+import { useState } from 'react';
 
 interface PlatformCardProps {
   name: string;
@@ -19,28 +20,31 @@ const iconMap: Record<string, LucideIcon> = {
 
 const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
   const IconComponent = iconMap[iconName] || Globe;
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
-      <div className="relative h-40 overflow-hidden bg-gradient-to-br from-indigo-500/30 to-purple-500/30">
+      <div className="relative h-40 overflow-hidden">
+        {imageLoaded ? (
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={() => setImageLoaded(false)}
+          />
+        ) : (
+          <div className={`w-full h-full bg-gradient-to-br ${color} flex items-center justify-center`}>
+            <IconComponent className="w-16 h-16 text-white/40" />
+          </div>
+        )}
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          onLoad={(e) => {
-            const target = e.target as HTMLImageElement;
-            const iconContainer = target.parentElement?.querySelector('.icon-placeholder') as HTMLElement;
-            if (iconContainer) iconContainer.style.display = 'none';
-          }}
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            target.style.display = 'none';
-          }}
+          className="hidden"
+          onLoad={() => setImageLoaded(true)}
+          onError={() => setImageLoaded(false)}
         />
-        <div className="icon-placeholder absolute inset-0 flex items-center justify-center">
-          <IconComponent className="w-12 h-12 text-white/30" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
       </div>
       
       <div className="relative p-6">
