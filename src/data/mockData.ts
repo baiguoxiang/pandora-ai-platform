@@ -129,9 +129,9 @@ export const platforms: Platform[] = [
     description: '聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户即可使用全球模型',
     icon: 'ShoppingCart',
     color: 'from-blue-500 to-cyan-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20technology%20supermarket%20with%20digital%20tokens%20and%20futuristic%20interface&image_size=landscape_16_9',
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chip%20with%20glowing%20circuits%20and%20drone%20swarm%20flying%20formation%20blue%20tech%20background&image_size=landscape_16_9',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20technology%20supermarket%20with%20digital%20tokens&image_size=landscape_16_9',
+      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chip%20with%20glowing%20circuits%20and%20drone%20swarm&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20AI%20dashboard%20interface&image_size=landscape_16_9',
     ],
   },
