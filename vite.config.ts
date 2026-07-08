@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/pandora-ai-platform/',
   server: {
     host: '0.0.0.0',
     port: 5173,
