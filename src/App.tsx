@@ -13,7 +13,7 @@ import RegisterPage from "./pages/RegisterPage";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/pandora-ai-platform">
       <div className="min-h-screen bg-gradient-primary overflow-x-hidden">
           <Navbar />
           <main>
