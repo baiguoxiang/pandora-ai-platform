@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>潘多拉 - 全球AI创业平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      // GitHub Pages 404 redirect for React Router
+      const path = window.location.pathname;
+      const base = '/pandora-ai-platform/';
+      if (path.startsWith(base)) {
+        window.location.replace(base + '#!' + path);
+      } else {
+        window.location.replace(base);
+      }
+    </script>
+  </head>
+  <body>
+    <p>正在重定向...</p>
+  </body>
+</html>
