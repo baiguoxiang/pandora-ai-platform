@@ -167,9 +167,9 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20e-commerce%20platform%20with%20global%20shopping%20and%20digital%20storefront&image_size=landscape_16_9',
+    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20blue%20AI%20e-commerce%20dashboard%20with%20data%20charts%20pie%20chart%20bar%20graph%20sales%20analytics%20real-time%20orders%20statistics%20futuristic%20interface&image_size=landscape_16_9',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20e-commerce%20platform%20dashboard&image_size=landscape_16_9',
+      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20blue%20AI%20e-commerce%20dashboard%20with%20data%20charts&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=online%20shopping%20storefront%20with%20AI%20recommendations&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cross%20border%20ecommerce%20global%20distribution&image_size=landscape_16_9',
     ],
