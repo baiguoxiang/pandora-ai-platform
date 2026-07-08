@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, ArrowRight } from 'lucide-react';
 import { useStore } from '../store';
@@ -26,49 +26,49 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-primary flex items-center justify-center pt-24 pb-16">
-      <div className="max-w-md w-full mx-4">
+      <div className="max-w-lg w-full mx-4">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
+            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
               <span className="text-white font-bold text-2xl">潘</span>
             </div>
             <span className="text-2xl font-bold text-white">潘多拉</span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">欢迎回来</h1>
-          <p className="text-white">登录您的账户，继续AI创业之旅</p>
+          <p className="text-white/70 text-base">登录您的账户，继续AI创业之旅</p>
         </div>
 
         <div className="bg-gradient-card backdrop-blur-sm rounded-2xl p-8 border border-white/10">
           <form onSubmit={handleSubmit}>
             <div className="mb-6">
-              <label className="block text-white text-sm font-medium mb-2">邮箱</label>
+              <label className="block text-white text-base font-medium mb-3">邮箱</label>
               <div className="relative">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white" />
+                <Mail className="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-white/60" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="请输入邮箱地址"
-                  className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition-colors"
+                  className="w-full pl-14 pr-5 py-4 bg-white/10 border border-white/20 rounded-xl text-white text-base placeholder-white/40 focus:outline-none focus:border-indigo-500 focus:bg-white/15 transition-all"
                 />
               </div>
             </div>
 
             <div className="mb-6">
-              <label className="block text-white text-sm font-medium mb-2">密码</label>
+              <label className="block text-white text-base font-medium mb-3">密码</label>
               <div className="relative">
-                <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-white" />
+                <Lock className="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-white/60" />
                 <input
                   type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="请输入密码"
-                  className="w-full pl-12 pr-12 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 transition-colors"
+                  className="w-full pl-14 pr-14 py-4 bg-white/10 border border-white/20 rounded-xl text-white text-base placeholder-white/40 focus:outline-none focus:border-indigo-500 focus:bg-white/15 transition-all"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-white transition-colors"
+                  className="absolute right-5 top-1/2 -translate-y-1/2 text-white/60 hover:text-white transition-colors"
                 >
                   {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                 </button>
@@ -79,11 +79,11 @@ const LoginPage = () => {
               <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
-                  className="w-4 h-4 rounded border-gray-600 bg-white/5 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-0"
+                  className="w-5 h-5 rounded border-gray-500 bg-white/10 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-0"
                 />
-                <span className="text-white text-sm">记住我</span>
+                <span className="text-white/80 text-base">记住我</span>
               </label>
-              <Link to="/" className="text-indigo-400 hover:text-indigo-300 text-sm">
+              <Link to="/" className="text-indigo-400 hover:text-indigo-300 text-base">
                 忘记密码？
               </Link>
             </div>
@@ -91,9 +91,9 @@ const LoginPage = () => {
             <button
               type="submit"
               disabled={isLoading || !email || !password}
-              className={`w-full py-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
+              className={`w-full py-4 rounded-xl font-semibold text-base transition-all flex items-center justify-center gap-2 ${
                 isLoading || !email || !password
-                  ? 'bg-gray-600 text-white cursor-not-allowed'
+                  ? 'bg-gray-600 text-white/70 cursor-not-allowed'
                   : 'bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:opacity-90 glow-effect'
               }`}
             >
@@ -112,9 +112,9 @@ const LoginPage = () => {
           </form>
 
           <div className="mt-6">
-            <p className="text-center text-white text-sm">
+            <p className="text-center text-white/70 text-base">
               还没有账户？
-              <Link to="/register" className="text-indigo-400 hover:text-indigo-300 ml-1">
+              <Link to="/register" className="text-indigo-400 hover:text-indigo-300 ml-1 font-medium">
                 立即注册
               </Link>
             </p>
@@ -126,7 +126,7 @@ const LoginPage = () => {
                 <div className="w-full border-t border-white/10" />
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-gradient-card text-white">或使用以下方式登录</span>
+                <span className="px-4 bg-gradient-card text-white/60">或使用以下方式登录</span>
               </div>
             </div>
             
@@ -151,11 +151,11 @@ const LoginPage = () => {
         </div>
 
         <div className="mt-6 text-center">
-          <p className="text-white text-xs">
+          <p className="text-white/50 text-sm">
             登录即表示您同意我们的
-            <Link to="/" className="text-white hover:text-white">服务条款</Link>
+            <Link to="/" className="text-white/70 hover:text-white">服务条款</Link>
             和
-            <Link to="/" className="text-white hover:text-white">隐私政策</Link>
+            <Link to="/" className="text-white/70 hover:text-white">隐私政策</Link>
           </p>
         </div>
       </div>
