@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe, ChevronDown, User } from 'lucide-react';
 import { useStore } from '../store';
@@ -109,7 +109,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="lg:hidden bg-black/90 backdrop-blur-md">
+        <div className="lg:hidden fixed inset-x-0 top-16 bg-black border-b border-white/10 z-50">
           <div className="px-4 py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
