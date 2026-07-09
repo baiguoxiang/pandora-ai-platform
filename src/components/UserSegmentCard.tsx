@@ -51,10 +51,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
             <IconComponent className="w-20 h-20 text-white/80" />
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-        <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
-          <IconComponent className="w-7 h-7 text-white" />
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </div>
       
       <div className="relative p-6">
