@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -32,16 +33,24 @@ const getGradientColor = (color: string) => {
 
 const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
+  const [imageLoaded, setImageLoaded] = useState(true);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
       <div className="relative h-48 overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-        />
+        {imageLoaded && (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={() => setImageLoaded(false)}
+          />
+        )}
+        {!imageLoaded && (
+          <div className={`w-full h-full bg-gradient-to-br ${color} flex items-center justify-center`}>
+            <IconComponent className="w-20 h-20 text-white/80" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
         <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
           <IconComponent className="w-7 h-7 text-white" />
