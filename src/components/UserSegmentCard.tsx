@@ -17,6 +17,19 @@ const iconMap: Record<string, LucideIcon> = {
   Landmark,
 };
 
+const gradientMap: Record<string, string> = {
+  'from-blue-500 to-cyan-400': 'linear-gradient(to right, #3B82F6, #22D3EE)',
+  'from-pink-500 to-purple-400': 'linear-gradient(to right, #EC4899, #A855F7)',
+  'from-amber-500 to-orange-400': 'linear-gradient(to right, #F59E0B, #F97316)',
+  'from-green-500 to-emerald-400': 'linear-gradient(to right, #22C55E, #10B981)',
+  'from-rose-500 to-pink-400': 'linear-gradient(to right, #F43F5E, #EC4899)',
+  'from-indigo-500 to-violet-400': 'linear-gradient(to right, #6366F1, #8B5CF6)',
+};
+
+const getGradientColor = (color: string) => {
+  return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
+};
+
 const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
 
@@ -37,7 +50,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       
       <div className="relative p-6">
         <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
-        <div className={`w-16 h-2 rounded-full bg-gradient-to-r ${color} mb-3`} />
+        <div className="w-16 h-2 rounded-full mb-3" style={{ background: getGradientColor(color) }} />
         <p className="text-white/70 text-[8px] mb-6">{subtitle}</p>
 
         <ul className="space-y-3 mb-8">

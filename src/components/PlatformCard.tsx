@@ -17,6 +17,19 @@ const iconMap: Record<string, LucideIcon> = {
   Globe,
 };
 
+const gradientMap: Record<string, string> = {
+  'from-blue-500 to-cyan-400': 'linear-gradient(to right, #3B82F6, #22D3EE)',
+  'from-pink-500 to-purple-400': 'linear-gradient(to right, #EC4899, #A855F7)',
+  'from-amber-500 to-orange-400': 'linear-gradient(to right, #F59E0B, #F97316)',
+  'from-green-500 to-emerald-400': 'linear-gradient(to right, #22C55E, #10B981)',
+  'from-rose-500 to-pink-400': 'linear-gradient(to right, #F43F5E, #EC4899)',
+  'from-indigo-500 to-violet-400': 'linear-gradient(to right, #6366F1, #8B5CF6)',
+};
+
+const getGradientColor = (color: string) => {
+  return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
+};
+
 const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
   const IconComponent = iconMap[iconName] || Globe;
 
@@ -37,7 +50,7 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
         </div>
         
         <h3 className="text-white text-sm font-semibold mb-2">{name}</h3>
-        <div className={`w-16 h-2 rounded-full bg-gradient-to-r ${color} mb-3`} />
+        <div className="w-16 h-2 rounded-full mb-3" style={{ background: getGradientColor(color) }} />
         <p className="text-white/70 text-[8px] leading-relaxed">{description}</p>
 
         <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[8px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
