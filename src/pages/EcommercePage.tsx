@@ -177,25 +177,40 @@ const EcommercePage = () => {
                   <div className="relative">
                     <h4 className="text-white font-semibold mb-4">热门商品</h4>
                     <div className="space-y-4">
-                      {products.slice(0, 3).map((product, i) => (
-                        <div key={product.id} className="flex items-center gap-4">
-                          <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold ${
-                            i === 0 ? 'bg-gradient-to-br from-yellow-500 to-orange-500 text-white' :
-                            i === 1 ? 'bg-gradient-to-br from-gray-400 to-gray-500 text-white' :
-                            'bg-gradient-to-br from-orange-600 to-orange-700 text-white'
-                          }`}>
-                            {i + 1}
+                      {products.slice(0, 3).map((product, i) => {
+                        const [imageLoaded, setImageLoaded] = useState(true);
+                        return (
+                          <div key={product.id} className="flex items-center gap-4">
+                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold ${
+                              i === 0 ? 'bg-gradient-to-br from-yellow-500 to-orange-500 text-white' :
+                              i === 1 ? 'bg-gradient-to-br from-gray-400 to-gray-500 text-white' :
+                              'bg-gradient-to-br from-orange-600 to-orange-700 text-white'
+                            }`}>
+                              {i + 1}
+                            </div>
+                            <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-orange-900/50 to-amber-900/50">
+                              {imageLoaded && (
+                                <img 
+                                  src={product.image} 
+                                  alt={product.name} 
+                                  className="w-full h-full object-cover" 
+                                  onError={() => setImageLoaded(false)} 
+                                />
+                              )}
+                              {!imageLoaded && (
+                                <div className="w-full h-full flex items-center justify-center">
+                                  <ShoppingCart className="w-6 h-6 text-white/40" />
+                                </div>
+                              )}
+                            </div>
+                            <div className="flex-1">
+                              <p className="text-white text-sm">{product.name}</p>
+                              <p className="text-white text-xs">销量: {product.sales}</p>
+                            </div>
+                            <p className="text-white font-semibold">${product.price}</p>
                           </div>
-                          <div className="w-12 h-12 rounded-lg overflow-hidden">
-                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                          </div>
-                          <div className="flex-1">
-                            <p className="text-white text-sm">{product.name}</p>
-                            <p className="text-white text-xs">销量: {product.sales}</p>
-                          </div>
-                          <p className="text-white font-semibold">${product.price}</p>
-                        </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   </div>
                 </div>

@@ -169,22 +169,37 @@ const ContentPage = () => {
               <h3 className="text-xl font-semibold text-white mb-6">作品展示</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { title: '科幻短剧《星际穿越》', type: '短剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                  { title: '动漫《未来城市》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                  { title: '宣传片《AI时代》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                  { title: '插画《梦境》', type: '图片', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                  { title: '纪录片《自然之美》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                  { title: '漫画《星际冒险》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
-                ].map((item, index) => (
-                  <div key={index} className="group relative rounded-xl overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-32 object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-4">
-                      <span className="inline-block px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full mb-2">{item.type}</span>
-                      <h4 className="text-white font-semibold text-sm">{item.title}</h4>
+                  { title: '科幻短剧《星际穿越》', type: '短剧', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '动漫《未来城市》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '宣传片《AI时代》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
+                  { title: '插画《梦境》', type: '图片', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '纪录片《自然之美》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
+                  { title: '漫画《星际冒险》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg', color: 'from-yellow-500 to-orange-400' },
+                ].map((item, index) => {
+                  const [imageLoaded, setImageLoaded] = useState(true);
+                  return (
+                    <div key={index} className="group relative rounded-xl overflow-hidden">
+                      {imageLoaded && (
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          className="w-full h-32 object-cover" 
+                          onError={() => setImageLoaded(false)} 
+                        />
+                      )}
+                      {!imageLoaded && (
+                        <div className={`w-full h-32 bg-gradient-to-br ${item.color} flex items-center justify-center`}>
+                          <Play className="w-12 h-12 text-white/60" />
+                        </div>
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <span className="inline-block px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full mb-2">{item.type}</span>
+                        <h4 className="text-white font-semibold text-sm">{item.title}</h4>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           </div>
