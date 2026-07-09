@@ -16,7 +16,7 @@ const DigitalStaffPage = () => {
       name: '小美',
       role: '电商主播',
       style: 'from-pink-500 to-rose-400',
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=female%20digital%20human%20avatar%20ecommerce%20host%20professional&image_size=square',
+      image: '/pandora-ai-platform/images/platform-5.jpg',
       stats: { liveCount: 128, viewers: '50万+', sales: '200万+' },
     },
     {
@@ -24,7 +24,7 @@ const DigitalStaffPage = () => {
       name: '小智',
       role: '知识主播',
       style: 'from-blue-500 to-cyan-400',
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=male%20digital%20human%20avatar%20knowledge%20presenter%20professional&image_size=square',
+      image: '/pandora-ai-platform/images/platform-5.jpg',
       stats: { liveCount: 89, viewers: '30万+', sales: '150万+' },
     },
     {
@@ -32,7 +32,7 @@ const DigitalStaffPage = () => {
       name: '小薇',
       role: '娱乐主播',
       style: 'from-purple-500 to-violet-400',
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=female%20digital%20human%20avatar%20entertainment%20host%20fun&image_size=square',
+      image: '/pandora-ai-platform/images/platform-5.jpg',
       stats: { liveCount: 215, viewers: '80万+', sales: '350万+' },
     },
     {
@@ -40,23 +40,23 @@ const DigitalStaffPage = () => {
       name: '小宇',
       role: '游戏主播',
       style: 'from-green-500 to-emerald-400',
-      image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=male%20digital%20human%20avatar%20gaming%20streamer%20energetic&image_size=square',
+      image: '/pandora-ai-platform/images/platform-5.jpg',
       stats: { liveCount: 156, viewers: '60万+', sales: '280万+' },
     },
   ];
 
   const chatbotFeatures = [
-    { icon: MessageSquare, title: '7x24小时在线', desc: '全天候服务，永不疲倦', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20chatbot%20service%2024%20hours%20support%20interface&image_size=square' },
-    { icon: Shield, title: '多语种支持', desc: '支持100+语言，服务全球客户', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=multilingual%20AI%20translation%20service%20world%20globe&image_size=square' },
-    { icon: Sparkles, title: '智能对话', desc: '理解上下文，精准回答', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20AI%20conversation%20bot%20chat%20interface&image_size=square' },
-    { icon: Settings, title: '自定义配置', desc: '根据业务需求定制', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20chatbot%20customization%20settings%20dashboard&image_size=square' },
+    { icon: MessageSquare, title: '7x24小时在线', desc: '全天候服务，永不疲倦' },
+    { icon: Shield, title: '多语种支持', desc: '支持100+语言，服务全球客户' },
+    { icon: Sparkles, title: '智能对话', desc: '理解上下文，精准回答' },
+    { icon: Settings, title: '自定义配置', desc: '根据业务需求定制' },
   ];
 
   const automationTasks = [
-    { title: '定时直播', desc: '自动安排直播时间，无需人工干预', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=automated%20live%20streaming%20schedule%20calendar&image_size=square' },
-    { title: '智能回复', desc: '自动回复客户咨询，提高响应速度', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20auto%20reply%20customer%20service%20chat&image_size=square' },
-    { title: '数据分析', desc: '自动分析运营数据，生成报告', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=automated%20data%20analysis%20report%20charts&image_size=square' },
-    { title: '内容发布', desc: '自动发布社交媒体内容', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=auto%20social%20media%20content%20publishing%20platform&image_size=square' },
+    { title: '定时直播', desc: '自动安排直播时间，无需人工干预' },
+    { title: '智能回复', desc: '自动回复客户咨询，提高响应速度' },
+    { title: '数据分析', desc: '自动分析运营数据，生成报告' },
+    { title: '内容发布', desc: '自动发布社交媒体内容' },
   ];
 
   return (
@@ -73,9 +73,9 @@ const DigitalStaffPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: Video, value: '1000+', label: '数字人直播', desc: '每天', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20human%20live%20streaming%20statistics&image_size=square' },
-            { icon: MessageSquare, value: '500万+', label: '智能对话', desc: '每月', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20chatbot%20conversation%20statistics&image_size=square' },
-            { icon: Clock, value: '99.9%', label: '服务可用', desc: '全年', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=service%20availability%20uptime%20monitoring&image_size=square' },
+            { icon: Video, value: '1000+', label: '数字人直播', desc: '每天' },
+            { icon: MessageSquare, value: '500万+', label: '智能对话', desc: '每月' },
+            { icon: Clock, value: '99.9%', label: '服务可用', desc: '全年' },
           ].map((stat) => (
             <div key={stat.label} className="bg-gradient-card backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">

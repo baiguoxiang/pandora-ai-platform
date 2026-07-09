@@ -22,15 +22,18 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-primary">
       <section className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-black" />
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0a0e27] to-[#0d0a25]" />
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-gradient-to-r from-indigo-600/30 to-transparent rounded-full blur-[120px]" />
-          <div className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-gradient-to-l from-purple-600/30 to-transparent rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-gradient-to-t from-cyan-600/20 to-transparent rounded-full blur-[100px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-indigo-500/5 via-purple-500/5 to-transparent rounded-full blur-[150px]" />
+        <div className="absolute top-0 left-0 w-full h-full z-10">
+          <div className="absolute top-0 left-0 w-[900px] h-[900px]" style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.6) 0%, rgba(139,92,246,0.4) 40%, rgba(236,72,153,0.2) 70%, transparent 100%)', filter: 'blur(120px)' }} />
+          <div className="absolute top-1/4 right-0 w-[700px] h-[700px]" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.5) 0%, rgba(139,92,246,0.4) 50%, rgba(99,102,241,0.2) 80%, transparent 100%)', filter: 'blur(100px)' }} />
+          <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.5) 0%, rgba(59,130,246,0.4) 50%, rgba(99,102,241,0.2) 80%, transparent 100%)', filter: 'blur(90px)' }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px]" style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.3) 0%, rgba(139,92,246,0.25) 40%, rgba(236,72,153,0.15) 70%, transparent 100%)', filter: 'blur(150px)' }} />
+          <div className="absolute top-1/4 right-1/4 w-[250px] h-[250px]" style={{ background: 'radial-gradient(circle, rgba(250,204,21,0.5) 0%, transparent 70%)', filter: 'blur(40px)' }} />
+          <div className="absolute bottom-1/4 left-1/4 w-[200px] h-[200px]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.5) 0%, transparent 70%)', filter: 'blur(35px)' }} />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 z-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 mb-6">
               <Sparkles className="w-4 h-4 text-yellow-400" />
@@ -160,6 +163,7 @@ const HomePage = () => {
                     src="/pandora-ai-platform/images/global-network.jpg"
                     alt="全球AI网络"
                     className="w-full h-full object-cover"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">

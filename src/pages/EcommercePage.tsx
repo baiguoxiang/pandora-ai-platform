@@ -13,10 +13,10 @@ const EcommercePage = () => {
   ];
 
   const products = [
-    { id: '1', name: '智能手表', category: '电子产品', price: 299, sales: 1258, status: 'active', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20watch%20product%20photo%20on%20white%20background&image_size=square' },
-    { id: '2', name: '无线耳机', category: '电子产品', price: 199, sales: 2345, status: 'active', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wireless%20earbuds%20product%20photo%20on%20white%20background&image_size=square' },
-    { id: '3', name: '便携充电宝', category: '数码配件', price: 89, sales: 5678, status: 'active', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portable%20power%20bank%20product%20photo%20on%20white%20background&image_size=square' },
-    { id: '4', name: '智能台灯', category: '智能家居', price: 159, sales: 892, status: 'draft', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20desk%20lamp%20product%20photo%20on%20white%20background&image_size=square' },
+    { id: '1', name: '智能手表', category: '电子产品', price: 299, sales: 1258, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
+    { id: '2', name: '无线耳机', category: '电子产品', price: 199, sales: 2345, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
+    { id: '3', name: '便携充电宝', category: '数码配件', price: 89, sales: 5678, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
+    { id: '4', name: '智能台灯', category: '智能家居', price: 159, sales: 892, status: 'draft', image: '/pandora-ai-platform/images/platform-4.jpg' },
   ];
 
   const liveStats = [
@@ -205,10 +205,10 @@ const EcommercePage = () => {
             {activeTab === 'distribution' && (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {[
-                  { name: 'TikTok', users: '10亿+', color: 'from-cyan-500 to-blue-500', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=tiktok%20social%20media%20platform%20logo%20concept&image_size=square' },
-                  { name: 'YouTube', users: '20亿+', color: 'from-red-500 to-orange-500', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=youtube%20video%20platform%20logo%20concept&image_size=square' },
-                  { name: 'Amazon', users: '3亿+', color: 'from-orange-500 to-amber-500', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=amazon%20ecommerce%20platform%20logo%20concept&image_size=square' },
-                  { name: 'Shopify', users: '400万+', color: 'from-green-500 to-emerald-500', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=shopify%20ecommerce%20platform%20logo%20concept&image_size=square' },
+                  { name: 'TikTok', users: '10亿+', color: 'from-cyan-500 to-blue-500' },
+                  { name: 'YouTube', users: '20亿+', color: 'from-red-500 to-orange-500' },
+                  { name: 'Amazon', users: '3亿+', color: 'from-orange-500 to-amber-500' },
+                  { name: 'Shopify', users: '400万+', color: 'from-green-500 to-emerald-500' },
                 ].map((platform) => (
                   <div key={platform.name} className="bg-white/5 rounded-xl overflow-hidden text-center">
                     <div className={`relative h-32 bg-gradient-to-br ${platform.color}`}>

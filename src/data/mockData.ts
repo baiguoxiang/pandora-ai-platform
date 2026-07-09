@@ -41,7 +41,7 @@ export const aiModels: AIModel[] = [
     usageCount: 1258000,
     status: 'available',
     provider: 'OpenAI',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chatbot%20interface%20with%20blue%20glow%20technology%20background&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '2',
@@ -52,7 +52,7 @@ export const aiModels: AIModel[] = [
     usageCount: 892000,
     status: 'available',
     provider: 'Anthropic',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=advanced%20AI%20neural%20network%20visualization%20with%20purple%20hues&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '3',
@@ -63,7 +63,7 @@ export const aiModels: AIModel[] = [
     usageCount: 2345000,
     status: 'available',
     provider: 'Stability AI',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20generated%20artistic%20image%20creation%20process%20with%20colorful%20palette&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '4',
@@ -74,7 +74,7 @@ export const aiModels: AIModel[] = [
     usageCount: 1567000,
     status: 'available',
     provider: 'OpenAI',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=creative%20AI%20image%20generation%20workspace%20with%20fantasy%20elements&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '5',
@@ -85,7 +85,7 @@ export const aiModels: AIModel[] = [
     usageCount: 342000,
     status: 'available',
     provider: 'OpenAI',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20video%20production%20studio%20with%20film%20reels%20and%20neon%20lights&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '6',
@@ -96,7 +96,7 @@ export const aiModels: AIModel[] = [
     usageCount: 567000,
     status: 'available',
     provider: 'Runway',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20video%20editing%20software%20interface%20with%20AI%20tools&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '7',
@@ -107,7 +107,7 @@ export const aiModels: AIModel[] = [
     usageCount: 987000,
     status: 'available',
     provider: 'ElevenLabs',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20voice%20synthesis%20audio%20waveform%20visualization%20with%20rainbow%20colors&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
   {
     id: '8',
@@ -118,7 +118,7 @@ export const aiModels: AIModel[] = [
     usageCount: 3456000,
     status: 'available',
     provider: 'OpenAI',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=speech%20recognition%20AI%20interface%20with%20microphone%20and%20sound%20waves&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
   },
 ];
 
@@ -270,7 +270,7 @@ export const recentOrders = [
 ];
 
 export const heroImages = [
-  'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20technology%20abstract%20background%20with%20neon%20lights%20and%20data%20streams&image_size=landscape_16_9',
-  'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20AI%20network%20connecting%20people%20and%20businesses%20worldwide&image_size=landscape_16_9',
-  'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=innovation%20AI%20workspace%20with%20holographic%20displays%20and%20creative%20energy&image_size=landscape_16_9',
+  '/pandora-ai-platform/images/platform-1.jpg',
+  '/pandora-ai-platform/images/platform-1.jpg',
+  '/pandora-ai-platform/images/platform-1.jpg',
 ];

@@ -27,8 +27,9 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
           src={image}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
         <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
           <IconComponent className="w-7 h-7 text-white" />
         </div>

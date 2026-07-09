@@ -146,10 +146,10 @@ const ContentPage = () => {
               <h3 className="text-xl font-semibold text-white mb-6">创作流程</h3>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
                 {[
-                  { step: '1', title: '输入创意', desc: '描述您的创作想法', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=creative%20brainstorming%20with%20AI%20idea%20generation%20interface&image_size=square' },
-                  { step: '2', title: '选择模型', desc: '挑选合适的AI模型', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20model%20selection%20dashboard%20with%20various%20models&image_size=square' },
-                  { step: '3', title: '生成内容', desc: '一键生成高质量内容', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20content%20generation%20process%20with%20creative%20output&image_size=square' },
-                  { step: '4', title: '全球分发', desc: '分发至全球平台变现', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20content%20distribution%20network%20with%20world%20map&image_size=square' },
+                  { step: '1', title: '输入创意', desc: '描述您的创作想法' },
+                  { step: '2', title: '选择模型', desc: '挑选合适的AI模型' },
+                  { step: '3', title: '生成内容', desc: '一键生成高质量内容' },
+                  { step: '4', title: '全球分发', desc: '分发至全球平台变现' },
                 ].map((item) => (
                   <div key={item.step} className="text-center">
                     <div className="relative w-24 h-24 mx-auto mb-3 rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
@@ -169,14 +169,15 @@ const ContentPage = () => {
               <h3 className="text-xl font-semibold text-white mb-6">作品展示</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { title: '科幻短剧《星际穿越》', type: '短剧', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=sci-fi%20short%20film%20space%20exploration%20scene&image_size=landscape_16_9' },
-                  { title: '动漫《未来城市》', type: '漫剧', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20futuristic%20city%20night%20scene&image_size=landscape_16_9' },
-                  { title: '宣传片《AI时代》', type: '视频', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20technology%20promotional%20video%20futuristic%20concept&image_size=landscape_16_9' },
-                  { title: '插画《梦境》', type: '图片', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=surreal%20dream%20landscape%20fantasy%20artwork&image_size=landscape_16_9' },
-                  { title: '纪录片《自然之美》', type: '视频', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=nature%20documentary%20beautiful%20landscape%20scenery&image_size=landscape_16_9' },
-                  { title: '漫画《星际冒险》', type: '漫剧', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=manga%20comic%20space%20adventure%20scene%20style&image_size=landscape_16_9' },
+                  { title: '科幻短剧《星际穿越》', type: '短剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
+                  { title: '动漫《未来城市》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
+                  { title: '宣传片《AI时代》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg' },
+                  { title: '插画《梦境》', type: '图片', image: '/pandora-ai-platform/images/platform-2.jpg' },
+                  { title: '纪录片《自然之美》', type: '视频', image: '/pandora-ai-platform/images/platform-2.jpg' },
+                  { title: '漫画《星际冒险》', type: '漫剧', image: '/pandora-ai-platform/images/platform-2.jpg' },
                 ].map((item, index) => (
-                  <div key={index} className="group relative rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
+                  <div key={index} className="group relative rounded-xl overflow-hidden">
+                    <img src={item.image} alt={item.title} className="w-full h-32 object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <span className="inline-block px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full mb-2">{item.type}</span>
