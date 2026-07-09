@@ -37,6 +37,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       
       <div className="relative p-6">
         <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
+        <div className={`w-8 h-1 rounded-full bg-gradient-to-r ${color} mb-3`} />
         <p className="text-white/70 text-[8px] mb-6">{subtitle}</p>
 
         <ul className="space-y-3 mb-8">

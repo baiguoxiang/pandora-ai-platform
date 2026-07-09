@@ -47,6 +47,7 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
         </div>
         
         <h3 className="text-white text-sm font-semibold mb-2">{name}</h3>
+        <div className={`w-8 h-1 rounded-full bg-gradient-to-r ${color} mb-3`} />
         <p className="text-white/70 text-[8px] leading-relaxed">{description}</p>
 
         <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[8px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
