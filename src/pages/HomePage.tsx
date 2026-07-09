@@ -134,10 +134,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Globe className="w-40 h-40 text-white/10" />
-                  </div>
+                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
+                  <img
+                    src="/pandora-ai-platform/images/global-network.jpg"
+                    alt="全球AI网络"
+                    className="w-full h-full object-cover"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">

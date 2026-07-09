@@ -129,7 +129,7 @@ export const platforms: Platform[] = [
     description: '聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户即可使用全球模型',
     icon: 'ShoppingCart',
     color: 'from-blue-500 to-cyan-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chip%20with%20glowing%20circuits%20and%20drone%20swarm%20flying%20formation%20blue%20tech%20background&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-1.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chip%20with%20glowing%20circuits%20and%20drone%20swarm&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20AI%20dashboard%20interface&image_size=landscape_16_9',
@@ -141,7 +141,7 @@ export const platforms: Platform[] = [
     description: '从剧本生成到视频合成，一键完成AI短剧漫剧制作，分发全球',
     icon: 'Film',
     color: 'from-purple-500 to-pink-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20ancient%20Chinese%20woman%20playing%20flute%20with%20white%20spirit%20fox%20mystical%20fantasy%20art%20AI%20generated&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-2.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20woman%20playing%20flute%20with%20white%20spirit%20fox&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20digital%20art%20creation&image_size=landscape_16_9',
@@ -154,7 +154,7 @@ export const platforms: Platform[] = [
     description: '提供AI写作、翻译、编程等多种工具，提升工作效率',
     icon: 'Wrench',
     color: 'from-green-500 to-emerald-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20tools%20platform%20dashboard%20with%20colorful%20radar%20chart%20showing%20AI%20chat%20writing%20design%20video%20productivity%20marketing%20tools%20icons&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-3.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20tools%20platform%20dashboard%20with%20colorful%20radar%20chart&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=programming%20code%20editor%20with%20AI%20assistant&image_size=landscape_16_9',
@@ -167,7 +167,7 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20blue%20AI%20e-commerce%20dashboard%20with%20data%20charts%20pie%20chart%20bar%20graph%20sales%20analytics%20real-time%20orders%20statistics%20futuristic%20interface&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-4.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20blue%20AI%20e-commerce%20dashboard%20with%20data%20charts&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=online%20shopping%20storefront%20with%20AI%20recommendations&image_size=landscape_16_9',
@@ -180,7 +180,7 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20AI%20digital%20human%20avatar%20portrait%20business%20man%20friendly%20face&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-5.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20digital%20human%20avatar%20professional%20portrait&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20customer%20service%20AI%20bot&image_size=landscape_16_9',
@@ -193,7 +193,7 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20business%20opportunity%20collaboration%20futuristic%20cityscape%20blue%20tech%20background%20businessman%20standing%20with%20laptop%20logistics%20packages%20robots%20cloud%20network%20data%20visualization&image_size=landscape_16_9',
+    image: '/pandora-ai-platform/images/platform-6.jpg',
     images: [
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20business%20opportunity%20collaboration%20futuristic%20city%20blue%20tech&image_size=landscape_16_9',
       'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20project%20collaboration%20platform&image_size=landscape_16_9',

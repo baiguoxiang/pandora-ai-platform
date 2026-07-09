@@ -17,17 +17,18 @@ const iconMap: Record<string, LucideIcon> = {
   Globe,
 };
 
-const PlatformCard = ({ name, description, icon: iconName, color }: PlatformCardProps) => {
+const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
   const IconComponent = iconMap[iconName] || Globe;
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
-      <div className={`relative h-40 bg-gradient-to-br ${color}`}>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <IconComponent className="w-20 h-20 text-white/20" />
-        </div>
+      <div className="relative h-40 overflow-hidden">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
       </div>
       
       <div className="relative p-6">
