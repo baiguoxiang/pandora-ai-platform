@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
 
 interface PlatformCardProps {
@@ -18,6 +19,7 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const IconComponent = iconMap[iconName] || Globe;
 
   return (
@@ -26,10 +28,17 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={() => setImageLoaded(true)}
           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
         />
+        <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-60 ${imageLoaded ? 'opacity-0' : ''}`} />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        {!imageLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <IconComponent className="w-16 h-16 text-white/30" />
+          </div>
+        )}
       </div>
       
       <div className="relative p-6">
