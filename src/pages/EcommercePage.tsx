@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { ShoppingCart, Video, BarChart3, Globe, Sparkles, TrendingUp, DollarSign } from 'lucide-react';
 import { ecommerceFeatures } from '../data/mockData';
 
@@ -46,6 +46,9 @@ const EcommercePage = () => {
                   src={feature.image}
                   alt={feature.name}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
               </div>
@@ -92,6 +95,9 @@ const EcommercePage = () => {
                           src={product.image}
                           alt={product.name}
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
                         />
                         <span className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-medium ${
                           product.status === 'active'
@@ -137,6 +143,9 @@ const EcommercePage = () => {
                           src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20human%20live%20shopping%20streaming%20broadcast%20studio&image_size=landscape_16_9"
                           alt="直播画面"
                           className="w-full h-full object-cover"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).style.display = 'none';
+                          }}
                         />
                         <div className="absolute inset-0 bg-black/30" />
                         <div className="absolute top-4 left-4 px-3 py-1 bg-red-500 rounded-full text-white text-xs font-medium flex items-center gap-1">
@@ -169,7 +178,7 @@ const EcommercePage = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-white/5 rounded-xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 opacity-5">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=data%20analytics%20dashboard%20with%20charts%20and%20graphs&image_size=square" className="w-full h-full object-cover" />
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=data%20analytics%20dashboard%20with%20charts%20and%20graphs&image_size=square" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                   </div>
                   <div className="relative">
                     <h4 className="text-white font-semibold mb-4">销售趋势</h4>
@@ -191,7 +200,7 @@ const EcommercePage = () => {
                 </div>
                 <div className="bg-white/5 rounded-xl p-6 relative overflow-hidden">
                   <div className="absolute inset-0 opacity-5">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=top%20selling%20products%20ecommerce%20ranking&image_size=square" className="w-full h-full object-cover" />
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=top%20selling%20products%20ecommerce%20ranking&image_size=square" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                   </div>
                   <div className="relative">
                     <h4 className="text-white font-semibold mb-4">热门商品</h4>
@@ -206,7 +215,7 @@ const EcommercePage = () => {
                             {i + 1}
                           </div>
                           <div className="w-12 h-12 rounded-lg overflow-hidden">
-                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                           </div>
                           <div className="flex-1">
                             <p className="text-white text-sm">{product.name}</p>
@@ -231,7 +240,7 @@ const EcommercePage = () => {
                 ].map((platform) => (
                   <div key={platform.name} className="bg-white/5 rounded-xl overflow-hidden text-center">
                     <div className="relative h-32">
-                      <img src={platform.image} alt={platform.name} className="w-full h-full object-cover" />
+                      <img src={platform.image} alt={platform.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     </div>
                     <div className="p-4">

@@ -196,7 +196,7 @@ const BusinessCollabPage = () => {
           ].map((stat) => (
             <div key={stat.label} className="bg-gradient-card backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="relative h-20 rounded-xl overflow-hidden mb-4">
-                <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" />
+                <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/60 to-purple-500/60" />
               </div>
               <p className="text-2xl font-bold text-white mb-1">{stat.value}</p>
@@ -250,7 +250,7 @@ const BusinessCollabPage = () => {
                   {opportunities.map((opp) => (
                     <div key={opp.id} className="group bg-white/5 rounded-xl overflow-hidden hover:border-indigo-500/50 border border-white/10 transition-all cursor-pointer">
                       <div className="relative h-32">
-                        <img src={opp.image} alt={opp.title} className="w-full h-full object-cover" />
+                        <img src={opp.image} alt={opp.title} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                         <span className={`absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-medium ${
                           opp.status === 'active'
@@ -297,7 +297,7 @@ const BusinessCollabPage = () => {
                 {projects.map((project) => (
                   <div key={project.id} className="bg-white/5 rounded-xl overflow-hidden">
                     <div className="relative h-32">
-                      <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+                      <img src={project.image} alt={project.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     </div>
                     <div className="p-4">
@@ -338,7 +338,7 @@ const BusinessCollabPage = () => {
                 {network.map((person) => (
                   <div key={person.id} className="group bg-white/5 rounded-xl p-4 text-center hover:border-indigo-500/50 border border-white/10 transition-all">
                     <div className="relative w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
-                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" />
+                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
                       <div className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 rounded-full border-2 border-[#0A1628]" />
                     </div>
                     <h4 className="text-white font-semibold mb-1">{person.name}</h4>

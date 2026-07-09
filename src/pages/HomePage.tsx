@@ -139,6 +139,9 @@ const HomePage = () => {
                     src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20AI%20network%20connection%20with%20globe%20and%20digital%20nodes%20technology&image_size=square"
                     alt="全球AI网络"
                     className="w-full h-full object-cover rounded-3xl"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent rounded-3xl" />
                   <div className="absolute inset-0 flex items-center justify-center">

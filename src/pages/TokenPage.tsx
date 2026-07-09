@@ -94,6 +94,9 @@ const TokenPage = () => {
                       src={aiModels.find((m) => m.id === selectedModel)?.image}
                       alt={aiModels.find((m) => m.id === selectedModel)?.name}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     <div className="absolute bottom-4 left-4">
@@ -166,6 +169,9 @@ const TokenPage = () => {
                     src={model.image}
                     alt={model.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                   <span className={`absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-medium ${
