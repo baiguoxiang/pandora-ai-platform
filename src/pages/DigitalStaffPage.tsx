@@ -79,12 +79,8 @@ const DigitalStaffPage = () => {
           ].map((stat) => (
             <div key={stat.label} className="bg-gradient-card backdrop-blur-sm rounded-2xl p-6 border border-white/10">
               <div className="flex items-center gap-4">
-                <div className="relative w-16 h-16 rounded-xl overflow-hidden">
-                  <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                  <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/50 to-purple-500/50" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <stat.icon className="w-6 h-6 text-white" />
-                  </div>
+                <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500/50 to-purple-500/50 flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <p className="text-2xl font-bold text-white">{stat.value}</p>
@@ -118,15 +114,7 @@ const DigitalStaffPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                   {avatars.map((avatar) => (
                     <div key={avatar.id} className="group bg-white/5 rounded-xl overflow-hidden hover:border-indigo-500/50 border border-white/10 transition-all">
-                      <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={avatar.image}
-                          alt={avatar.name}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
+                      <div className={`relative h-48 bg-gradient-to-br ${avatar.style}`}>
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] via-transparent to-transparent" />
                         <div className="absolute top-3 right-3 px-2 py-1 bg-red-500 rounded-full text-white text-xs font-medium flex items-center gap-1">
                           <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
@@ -171,8 +159,7 @@ const DigitalStaffPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {chatbotFeatures.map((feature) => (
                   <div key={feature.title} className="group bg-white/5 rounded-xl overflow-hidden">
-                    <div className="relative h-32">
-                      <img src={feature.image} alt={feature.title} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className="relative h-32 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                       <div className="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
                         <feature.icon className="w-5 h-5 text-white" />
@@ -194,8 +181,7 @@ const DigitalStaffPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {automationTasks.map((task) => (
                   <div key={task.title} className="group bg-white/5 rounded-xl overflow-hidden">
-                    <div className="relative h-32">
-                      <img src={task.image} alt={task.title} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className="relative h-32 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     </div>
                     <div className="p-4">

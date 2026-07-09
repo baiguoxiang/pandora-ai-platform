@@ -134,16 +134,11 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="relative w-full aspect-square max-w-lg mx-auto">
-                  <img
-                    src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20AI%20network%20connection%20with%20globe%20and%20digital%20nodes%20technology&image_size=square"
-                    alt="全球AI网络"
-                    className="w-full h-full object-cover rounded-3xl"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent rounded-3xl" />
+                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Globe className="w-40 h-40 text-white/10" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 animate-float">

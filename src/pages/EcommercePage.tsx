@@ -41,15 +41,7 @@ const EcommercePage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           {ecommerceFeatures.map((feature) => (
             <div key={feature.id} className="bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10">
-              <div className="relative h-32 overflow-hidden">
-                <img
-                  src={feature.image}
-                  alt={feature.name}
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
+              <div className="relative h-32 bg-gradient-to-br from-orange-900/50 to-amber-900/50">
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
               </div>
               <div className="p-4">
@@ -90,15 +82,7 @@ const EcommercePage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {products.map((product) => (
                     <div key={product.id} className="bg-white/5 rounded-xl overflow-hidden">
-                      <div className="relative h-40">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
+                      <div className="relative h-40 bg-gradient-to-br from-gray-800/50 to-gray-900/50">
                         <span className={`absolute top-2 left-2 px-2 py-1 rounded-full text-xs font-medium ${
                           product.status === 'active'
                             ? 'bg-green-500/20 text-green-400'
@@ -138,15 +122,7 @@ const EcommercePage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="bg-white/5 rounded-xl overflow-hidden">
-                      <div className="aspect-video relative">
-                        <img
-                          src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20human%20live%20shopping%20streaming%20broadcast%20studio&image_size=landscape_16_9"
-                          alt="直播画面"
-                          className="w-full h-full object-cover"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).style.display = 'none';
-                          }}
-                        />
+                      <div className="aspect-video relative bg-gradient-to-br from-orange-900/50 to-red-900/50">
                         <div className="absolute inset-0 bg-black/30" />
                         <div className="absolute top-4 left-4 px-3 py-1 bg-red-500 rounded-full text-white text-xs font-medium flex items-center gap-1">
                           <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
@@ -177,9 +153,7 @@ const EcommercePage = () => {
             {activeTab === 'analytics' && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="bg-white/5 rounded-xl p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-5">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=data%20analytics%20dashboard%20with%20charts%20and%20graphs&image_size=square" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                  </div>
+                  
                   <div className="relative">
                     <h4 className="text-white font-semibold mb-4">销售趋势</h4>
                     <div className="h-64 flex items-end gap-4">
@@ -199,9 +173,7 @@ const EcommercePage = () => {
                   </div>
                 </div>
                 <div className="bg-white/5 rounded-xl p-6 relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-5">
-                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=top%20selling%20products%20ecommerce%20ranking&image_size=square" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                  </div>
+                  
                   <div className="relative">
                     <h4 className="text-white font-semibold mb-4">热门商品</h4>
                     <div className="space-y-4">
@@ -239,8 +211,7 @@ const EcommercePage = () => {
                   { name: 'Shopify', users: '400万+', color: 'from-green-500 to-emerald-500', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=shopify%20ecommerce%20platform%20logo%20concept&image_size=square' },
                 ].map((platform) => (
                   <div key={platform.name} className="bg-white/5 rounded-xl overflow-hidden text-center">
-                    <div className="relative h-32">
-                      <img src={platform.image} alt={platform.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className={`relative h-32 bg-gradient-to-br ${platform.color}`}>
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     </div>
                     <div className="p-4">

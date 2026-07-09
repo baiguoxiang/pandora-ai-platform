@@ -120,15 +120,10 @@ const ContentPage = () => {
                         onClick={() => setSelectedTemplate(template.id)}
                         className="group p-4 bg-white/5 rounded-xl border border-white/10 hover:border-indigo-500/50 cursor-pointer transition-all hover:-translate-y-1"
                       >
-                        <div className="relative h-32 rounded-lg overflow-hidden mb-4">
-                          <img
-                            src={template.image}
-                            alt={template.name}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            onError={(e) => {
-                              (e.target as HTMLImageElement).style.display = 'none';
-                            }}
-                          />
+                        <div className={`relative h-32 rounded-lg mb-4 bg-gradient-to-br ${color}`}>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <IconComponent className="w-16 h-16 text-white/20" />
+                          </div>
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                           <div className={`absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-gradient-to-br ${color} flex items-center justify-center`}>
                             <IconComponent className="w-5 h-5 text-white" />
@@ -157,8 +152,7 @@ const ContentPage = () => {
                   { step: '4', title: '全球分发', desc: '分发至全球平台变现', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20content%20distribution%20network%20with%20world%20map&image_size=square' },
                 ].map((item) => (
                   <div key={item.step} className="text-center">
-                    <div className="relative w-24 h-24 mx-auto mb-3 rounded-xl overflow-hidden">
-                      <img src={item.image} alt={item.title} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className="relative w-24 h-24 mx-auto mb-3 rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-2 left-2 w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
                         <span className="text-white font-bold text-sm">{item.step}</span>
@@ -182,8 +176,7 @@ const ContentPage = () => {
                   { title: '纪录片《自然之美》', type: '视频', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=nature%20documentary%20beautiful%20landscape%20scenery&image_size=landscape_16_9' },
                   { title: '漫画《星际冒险》', type: '漫剧', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=manga%20comic%20space%20adventure%20scene%20style&image_size=landscape_16_9' },
                 ].map((item, index) => (
-                  <div key={index} className="group relative rounded-xl overflow-hidden">
-                    <img src={item.image} alt={item.title} className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-110" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                  <div key={index} className="group relative rounded-xl bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <span className="inline-block px-2 py-1 bg-indigo-500/80 text-white text-xs rounded-full mb-2">{item.type}</span>

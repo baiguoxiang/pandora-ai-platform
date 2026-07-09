@@ -89,15 +89,15 @@ const TokenPage = () => {
             {aiModels.find((m) => m.id === selectedModel) && (
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
-                  <div className="relative h-64 rounded-xl overflow-hidden mb-6">
-                    <img
-                      src={aiModels.find((m) => m.id === selectedModel)?.image}
-                      alt={aiModels.find((m) => m.id === selectedModel)?.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        (e.target as HTMLImageElement).style.display = 'none';
-                      }}
-                    />
+                  <div className={`relative h-64 rounded-xl overflow-hidden mb-6 bg-gradient-to-br ${
+                      aiModels.find((m) => m.id === selectedModel)?.category === 'text' ? 'from-blue-900/50 to-cyan-900/50' :
+                      aiModels.find((m) => m.id === selectedModel)?.category === 'image' ? 'from-purple-900/50 to-pink-900/50' :
+                      aiModels.find((m) => m.id === selectedModel)?.category === 'video' ? 'from-orange-900/50 to-red-900/50' :
+                      'from-green-900/50 to-emerald-900/50'
+                    }`}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Zap className="w-32 h-32 text-white/10" />
+                    </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     <div className="absolute bottom-4 left-4">
                       <h2 className="text-3xl font-bold text-white">
@@ -164,15 +164,15 @@ const TokenPage = () => {
                 onClick={() => setSelectedModel(model.id)}
                 className="group bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-indigo-500/50 transition-all cursor-pointer hover:-translate-y-1"
               >
-                <div className="relative h-36 overflow-hidden">
-                  <img
-                    src={model.image}
-                    alt={model.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
-                  />
+                <div className={`relative h-36 bg-gradient-to-br ${
+                    model.category === 'text' ? 'from-blue-900/50 to-cyan-900/50' :
+                    model.category === 'image' ? 'from-purple-900/50 to-pink-900/50' :
+                    model.category === 'video' ? 'from-orange-900/50 to-red-900/50' :
+                    'from-green-900/50 to-emerald-900/50'
+                  }`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Zap className="w-16 h-16 text-white/10" />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                   <span className={`absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-medium ${
                     model.status === 'available'

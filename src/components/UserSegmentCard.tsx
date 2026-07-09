@@ -17,23 +17,17 @@ const iconMap: Record<string, LucideIcon> = {
   Landmark,
 };
 
-const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
+const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className="relative h-48 overflow-hidden">
-        <div className={`w-full h-full bg-gradient-to-br ${color}`}>
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = 'none';
-            }}
-          />
+      <div className={`relative h-48 bg-gradient-to-br ${color}`}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <IconComponent className="w-24 h-24 text-white/20" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
         <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center`}>
           <IconComponent className="w-7 h-7 text-white" />
         </div>

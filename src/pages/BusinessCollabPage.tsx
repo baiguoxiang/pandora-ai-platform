@@ -195,10 +195,7 @@ const BusinessCollabPage = () => {
             { value: '200+', label: '覆盖国家', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20coverage%20world%20map%20connections&image_size=square' },
           ].map((stat) => (
             <div key={stat.label} className="bg-gradient-card backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-              <div className="relative h-20 rounded-xl overflow-hidden mb-4">
-                <img src={stat.image} alt={stat.label} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/60 to-purple-500/60" />
-              </div>
+              <div className="relative h-20 rounded-xl mb-4 bg-gradient-to-br from-indigo-500/60 to-purple-500/60" />
               <p className="text-2xl font-bold text-white mb-1">{stat.value}</p>
               <p className="text-white text-sm">{stat.label}</p>
             </div>
@@ -249,8 +246,7 @@ const BusinessCollabPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {opportunities.map((opp) => (
                     <div key={opp.id} className="group bg-white/5 rounded-xl overflow-hidden hover:border-indigo-500/50 border border-white/10 transition-all cursor-pointer">
-                      <div className="relative h-32">
-                        <img src={opp.image} alt={opp.title} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                      <div className="relative h-32 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                         <span className={`absolute top-3 left-3 px-2 py-1 rounded-full text-xs font-medium ${
                           opp.status === 'active'
@@ -296,8 +292,7 @@ const BusinessCollabPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {projects.map((project) => (
                   <div key={project.id} className="bg-white/5 rounded-xl overflow-hidden">
-                    <div className="relative h-32">
-                      <img src={project.image} alt={project.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className="relative h-32 bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628] to-transparent" />
                     </div>
                     <div className="p-4">
@@ -337,8 +332,8 @@ const BusinessCollabPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
                 {network.map((person) => (
                   <div key={person.id} className="group bg-white/5 rounded-xl p-4 text-center hover:border-indigo-500/50 border border-white/10 transition-all">
-                    <div className="relative w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
-                      <img src={person.image} alt={person.name} className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+                    <div className="relative w-20 h-20 mx-auto mb-3 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center">
+                      <span className="text-white text-xl font-bold">{person.name.charAt(0)}</span>
                       <div className="absolute bottom-0 right-0 w-5 h-5 bg-green-500 rounded-full border-2 border-[#0A1628]" />
                     </div>
                     <h4 className="text-white font-semibold mb-1">{person.name}</h4>
