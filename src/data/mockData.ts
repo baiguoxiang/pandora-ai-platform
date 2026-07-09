@@ -131,8 +131,8 @@ export const platforms: Platform[] = [
     color: 'from-blue-500 to-cyan-400',
     image: '/pandora-ai-platform/images/platform-1.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20chip%20with%20glowing%20circuits%20and%20drone%20swarm&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20AI%20dashboard%20interface&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-1.jpg',
+      '/pandora-ai-platform/images/platform-1.jpg',
     ],
   },
   {
@@ -143,9 +143,9 @@ export const platforms: Platform[] = [
     color: 'from-purple-500 to-pink-400',
     image: '/pandora-ai-platform/images/platform-2.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20woman%20playing%20flute%20with%20white%20spirit%20fox&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=anime%20style%20digital%20art%20creation&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20generated%20short%20drama%20scene&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-2.jpg',
+      '/pandora-ai-platform/images/platform-2.jpg',
+      '/pandora-ai-platform/images/platform-2.jpg',
     ],
   },
   {
@@ -156,9 +156,9 @@ export const platforms: Platform[] = [
     color: 'from-green-500 to-emerald-400',
     image: '/pandora-ai-platform/images/platform-3.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20tools%20platform%20dashboard%20with%20colorful%20radar%20chart&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=programming%20code%20editor%20with%20AI%20assistant&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20translation%20and%20writing%20interface&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-3.jpg',
+      '/pandora-ai-platform/images/platform-3.jpg',
+      '/pandora-ai-platform/images/platform-3.jpg',
     ],
   },
   {
@@ -169,9 +169,9 @@ export const platforms: Platform[] = [
     color: 'from-orange-500 to-amber-400',
     image: '/pandora-ai-platform/images/platform-4.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=dark%20blue%20AI%20e-commerce%20dashboard%20with%20data%20charts&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=online%20shopping%20storefront%20with%20AI%20recommendations&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cross%20border%20ecommerce%20global%20distribution&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-4.jpg',
+      '/pandora-ai-platform/images/platform-4.jpg',
+      '/pandora-ai-platform/images/platform-4.jpg',
     ],
   },
   {
@@ -182,9 +182,9 @@ export const platforms: Platform[] = [
     color: 'from-red-500 to-rose-400',
     image: '/pandora-ai-platform/images/platform-5.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20digital%20human%20avatar%20professional%20portrait&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20customer%20service%20AI%20bot&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=automated%20AI%20operations%20dashboard&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-5.jpg',
+      '/pandora-ai-platform/images/platform-5.jpg',
+      '/pandora-ai-platform/images/platform-5.jpg',
     ],
   },
   {
@@ -195,9 +195,9 @@ export const platforms: Platform[] = [
     color: 'from-indigo-500 to-violet-400',
     image: '/pandora-ai-platform/images/platform-6.jpg',
     images: [
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20business%20opportunity%20collaboration%20futuristic%20city%20blue%20tech&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20project%20collaboration%20platform&image_size=landscape_16_9',
-      'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20networking%20business%20connections&image_size=landscape_16_9',
+      '/pandora-ai-platform/images/platform-6.jpg',
+      '/pandora-ai-platform/images/platform-6.jpg',
+      '/pandora-ai-platform/images/platform-6.jpg',
     ],
   },
 ];
@@ -215,7 +215,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '立即创业',
     color: 'from-blue-600 to-blue-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=individual%20entrepreneur%20working%20from%20home%20with%20AI%20tools%20and%20laptop&image_size=portrait_4_3',
+    image: '/pandora-ai-platform/images/segment-1.jpg',
   },
   {
     id: '2',
@@ -229,7 +229,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '企业服务',
     color: 'from-purple-600 to-purple-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20enterprise%20office%20with%20AI%20dashboard%20and%20team%20collaboration&image_size=portrait_4_3',
+    image: '/pandora-ai-platform/images/segment-2.jpg',
   },
   {
     id: '3',
@@ -243,24 +243,24 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '合作洽谈',
     color: 'from-green-600 to-green-400',
-    image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20city%20government%20building%20with%20digital%20AI%20infrastructure&image_size=portrait_4_3',
+    image: '/pandora-ai-platform/images/segment-3.jpg',
   },
 ];
 
 export const contentTemplates = [
-  { id: '1', name: '短剧剧本生成', description: '输入主题，一键生成完整剧本', category: 'script', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20script%20writing%20tool%20with%20storyboard%20and%20characters&image_size=square' },
-  { id: '2', name: 'AI图片生成', description: '文字描述生成高质量图片', category: 'image', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20image%20generator%20interface%20with%20creative%20artwork&image_size=square' },
-  { id: '3', name: 'AI视频创作', description: '文本转视频，快速生成创意视频', category: 'video', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20video%20creation%20studio%20with%20timeline%20and%20effects&image_size=square' },
-  { id: '4', name: 'AI配音服务', description: '多语种AI配音，情感丰富', category: 'audio', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20voice%20over%20recording%20studio%20with%20microphones&image_size=square' },
-  { id: '5', name: '漫剧制作', description: '漫画风格视频创作', category: 'comic', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20comic%20and%20manga%20creation%20with%20characters%20and%20panels&image_size=square' },
-  { id: '6', name: '字幕翻译', description: '多语种字幕自动生成和翻译', category: 'subtitle', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20subtitle%20translation%20tool%20with%20multiple%20languages&image_size=square' },
+  { id: '1', name: '短剧剧本生成', description: '输入主题，一键生成完整剧本', category: 'script', image: '/pandora-ai-platform/images/template-1.jpg' },
+  { id: '2', name: 'AI图片生成', description: '文字描述生成高质量图片', category: 'image', image: '/pandora-ai-platform/images/template-2.jpg' },
+  { id: '3', name: 'AI视频创作', description: '文本转视频，快速生成创意视频', category: 'video', image: '/pandora-ai-platform/images/template-3.jpg' },
+  { id: '4', name: 'AI配音服务', description: '多语种AI配音，情感丰富', category: 'audio', image: '/pandora-ai-platform/images/template-4.jpg' },
+  { id: '5', name: '漫剧制作', description: '漫画风格视频创作', category: 'comic', image: '/pandora-ai-platform/images/template-5.jpg' },
+  { id: '6', name: '字幕翻译', description: '多语种字幕自动生成和翻译', category: 'subtitle', image: '/pandora-ai-platform/images/template-6.jpg' },
 ];
 
 export const ecommerceFeatures = [
-  { id: '1', name: '数字人直播', description: '30秒克隆形象，24小时不间断直播带货', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=digital%20human%20live%20streaming%20shopping%20broadcast&image_size=square' },
-  { id: '2', name: '商品素材生成', description: 'AI生成商品图片、视频、文案', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20product%20image%20generation%20for%20e-commerce&image_size=square' },
-  { id: '3', name: '智能选品', description: 'AI分析市场趋势，推荐热销商品', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=AI%20market%20analysis%20dashboard%20with%20charts%20and%20products&image_size=square' },
-  { id: '4', name: '全球分发', description: '一键分发至全球社媒与电商平台', image: 'https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=global%20social%20media%20distribution%20network%20with%20platform%20icons&image_size=square' },
+  { id: '1', name: '数字人直播', description: '30秒克隆形象，24小时不间断直播带货', image: '/pandora-ai-platform/images/platform-5.jpg' },
+  { id: '2', name: '商品素材生成', description: 'AI生成商品图片、视频、文案', image: '/pandora-ai-platform/images/platform-4.jpg' },
+  { id: '3', name: '智能选品', description: 'AI分析市场趋势，推荐热销商品', image: '/pandora-ai-platform/images/platform-4.jpg' },
+  { id: '4', name: '全球分发', description: '一键分发至全球社媒与电商平台', image: '/pandora-ai-platform/images/platform-6.jpg' },
 ];
 
 export const recentOrders = [
