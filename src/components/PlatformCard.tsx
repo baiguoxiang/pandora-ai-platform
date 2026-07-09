@@ -50,7 +50,7 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
         </div>
         
         <h3 className="text-white text-sm font-semibold mb-2">{name}</h3>
-        <div className="w-16 h-2 rounded-full mb-3" style={{ background: getGradientColor(color) }} />
+        <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: getGradientColor(color), marginBottom: '12px' }} />
         <p className="text-white/70 text-[8px] leading-relaxed">{description}</p>
 
         <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[8px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -50,7 +50,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       
       <div className="relative p-6">
         <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
-        <div className="w-16 h-2 rounded-full mb-3" style={{ background: getGradientColor(color) }} />
+        <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: getGradientColor(color), marginBottom: '12px' }} />
         <p className="text-white/70 text-[8px] mb-6">{subtitle}</p>
 
         <ul className="space-y-3 mb-8">
