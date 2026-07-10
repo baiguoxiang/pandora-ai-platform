@@ -44,11 +44,8 @@ const PlatformCard = ({ name, description, icon: iconName, color }: PlatformCard
         <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: gradient, marginBottom: '12px' }} />
         <p className="text-white/70 text-[8px] leading-relaxed">{description}</p>
 
-        <div className="mt-4 flex items-center gap-2 text-indigo-400 text-[8px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="mt-4 text-indigo-400 text-[8px] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <span>了解更多</span>
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
         </div>
       </div>
     </div>

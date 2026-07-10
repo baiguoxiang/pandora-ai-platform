@@ -8,10 +8,9 @@
       // GitHub Pages 404 redirect for React Router
       const path = window.location.pathname;
       const base = '/pandora-ai-platform/';
-      if (path.startsWith(base)) {
+      // Only redirect non-asset paths - don't redirect CSS/JS/image files
+      if (path.startsWith(base) && !path.includes('/assets/')) {
         window.location.replace(base + '#!' + path);
-      } else {
-        window.location.replace(base);
       }
     </script>
   </head>
