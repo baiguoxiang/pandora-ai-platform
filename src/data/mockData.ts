@@ -16,8 +16,6 @@ export interface Platform {
   description: string;
   icon: string;
   color: string;
-  image: string;
-  images?: string[];
 }
 
 export interface UserSegment {
@@ -28,7 +26,6 @@ export interface UserSegment {
   features: string[];
   cta: string;
   color: string;
-  image: string;
 }
 
 export const aiModels: AIModel[] = [
@@ -41,7 +38,7 @@ export const aiModels: AIModel[] = [
     usageCount: 1258000,
     status: 'available',
     provider: 'OpenAI',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '2',
@@ -52,7 +49,7 @@ export const aiModels: AIModel[] = [
     usageCount: 892000,
     status: 'available',
     provider: 'Anthropic',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '3',
@@ -63,7 +60,7 @@ export const aiModels: AIModel[] = [
     usageCount: 2345000,
     status: 'available',
     provider: 'Stability AI',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '4',
@@ -74,7 +71,7 @@ export const aiModels: AIModel[] = [
     usageCount: 1567000,
     status: 'available',
     provider: 'OpenAI',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '5',
@@ -85,7 +82,7 @@ export const aiModels: AIModel[] = [
     usageCount: 342000,
     status: 'available',
     provider: 'OpenAI',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '6',
@@ -96,7 +93,7 @@ export const aiModels: AIModel[] = [
     usageCount: 567000,
     status: 'available',
     provider: 'Runway',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '7',
@@ -107,7 +104,7 @@ export const aiModels: AIModel[] = [
     usageCount: 987000,
     status: 'available',
     provider: 'ElevenLabs',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '8',
@@ -118,7 +115,7 @@ export const aiModels: AIModel[] = [
     usageCount: 3456000,
     status: 'available',
     provider: 'OpenAI',
-    image: '/images/platform-1.jpg',
+    image: 'images/platform-1.jpg',
   },
 ];
 
@@ -129,11 +126,6 @@ export const platforms: Platform[] = [
     description: '聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户即可使用全球模型',
     icon: 'ShoppingCart',
     color: 'from-blue-500 to-cyan-400',
-    image: '/images/platform-1.jpg',
-    images: [
-      '/images/platform-1.jpg',
-      '/images/platform-1.jpg',
-    ],
   },
   {
     id: '2',
@@ -141,12 +133,6 @@ export const platforms: Platform[] = [
     description: '从剧本生成到视频合成，一键完成AI短剧漫剧制作，分发全球',
     icon: 'Film',
     color: 'from-purple-500 to-pink-400',
-    image: '/images/platform-2.jpg',
-    images: [
-      '/images/platform-2.jpg',
-      '/images/platform-2.jpg',
-      '/images/platform-2.jpg',
-    ],
   },
   {
     id: '3',
@@ -154,12 +140,6 @@ export const platforms: Platform[] = [
     description: '提供AI写作、翻译、编程等多种工具，提升工作效率',
     icon: 'Wrench',
     color: 'from-green-500 to-emerald-400',
-    image: '/images/platform-3.jpg',
-    images: [
-      '/images/platform-3.jpg',
-      '/images/platform-3.jpg',
-      '/images/platform-3.jpg',
-    ],
   },
   {
     id: '4',
@@ -167,12 +147,6 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
-    image: '/images/platform-4.jpg',
-    images: [
-      '/images/platform-4.jpg',
-      '/images/platform-4.jpg',
-      '/images/platform-4.jpg',
-    ],
   },
   {
     id: '5',
@@ -180,12 +154,6 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
-    image: '/images/platform-5.jpg',
-    images: [
-      '/images/platform-5.jpg',
-      '/images/platform-5.jpg',
-      '/images/platform-5.jpg',
-    ],
   },
   {
     id: '6',
@@ -193,12 +161,6 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
-    image: '/images/platform-6.jpg',
-    images: [
-      '/images/platform-6.jpg',
-      '/images/platform-6.jpg',
-      '/images/platform-6.jpg',
-    ],
   },
 ];
 
@@ -215,7 +177,6 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '立即创业',
     color: 'from-blue-600 to-blue-400',
-    image: '/images/segment-1.jpg',
   },
   {
     id: '2',
@@ -229,7 +190,6 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '企业服务',
     color: 'from-purple-600 to-purple-400',
-    image: '/images/segment-2.jpg',
   },
   {
     id: '3',
@@ -243,24 +203,23 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '合作洽谈',
     color: 'from-green-600 to-green-400',
-    image: '/images/segment-3.jpg',
   },
 ];
 
 export const contentTemplates = [
-  { id: '1', name: '短剧剧本生成', description: '输入主题，一键生成完整剧本', category: 'script', image: '/images/template-1.jpg' },
-  { id: '2', name: 'AI图片生成', description: '文字描述生成高质量图片', category: 'image', image: '/images/template-2.jpg' },
-  { id: '3', name: 'AI视频创作', description: '文本转视频，快速生成创意视频', category: 'video', image: '/images/template-3.jpg' },
-  { id: '4', name: 'AI配音服务', description: '多语种AI配音，情感丰富', category: 'audio', image: '/images/template-4.jpg' },
-  { id: '5', name: '漫剧制作', description: '漫画风格视频创作', category: 'comic', image: '/images/template-5.jpg' },
-  { id: '6', name: '字幕翻译', description: '多语种字幕自动生成和翻译', category: 'subtitle', image: '/images/template-6.jpg' },
+  { id: '1', name: '短剧剧本生成', description: '输入主题，一键生成完整剧本', category: 'script', image: 'images/template-1.jpg' },
+  { id: '2', name: 'AI图片生成', description: '文字描述生成高质量图片', category: 'image', image: 'images/template-2.jpg' },
+  { id: '3', name: 'AI视频创作', description: '文本转视频，快速生成创意视频', category: 'video', image: 'images/template-3.jpg' },
+  { id: '4', name: 'AI配音服务', description: '多语种AI配音，情感丰富', category: 'audio', image: 'images/template-4.jpg' },
+  { id: '5', name: '漫剧制作', description: '漫画风格视频创作', category: 'comic', image: 'images/template-5.jpg' },
+  { id: '6', name: '字幕翻译', description: '多语种字幕自动生成和翻译', category: 'subtitle', image: 'images/template-6.jpg' },
 ];
 
 export const ecommerceFeatures = [
-  { id: '1', name: '数字人直播', description: '30秒克隆形象，24小时不间断直播带货', image: '/images/platform-5.jpg' },
-  { id: '2', name: '商品素材生成', description: 'AI生成商品图片、视频、文案', image: '/images/platform-4.jpg' },
-  { id: '3', name: '智能选品', description: 'AI分析市场趋势，推荐热销商品', image: '/images/platform-4.jpg' },
-  { id: '4', name: '全球分发', description: '一键分发至全球社媒与电商平台', image: '/images/platform-6.jpg' },
+  { id: '1', name: '数字人直播', description: '30秒克隆形象，24小时不间断直播带货', image: 'images/platform-5.jpg' },
+  { id: '2', name: '商品素材生成', description: 'AI生成商品图片、视频、文案', image: 'images/platform-4.jpg' },
+  { id: '3', name: '智能选品', description: 'AI分析市场趋势，推荐热销商品', image: 'images/platform-4.jpg' },
+  { id: '4', name: '全球分发', description: '一键分发至全球社媒与电商平台', image: 'images/platform-6.jpg' },
 ];
 
 export const recentOrders = [
@@ -270,7 +229,7 @@ export const recentOrders = [
 ];
 
 export const heroImages = [
-  '/images/platform-1.jpg',
-  '/images/platform-1.jpg',
-  '/images/platform-1.jpg',
+  'images/platform-1.jpg',
+  'images/platform-1.jpg',
+  'images/platform-1.jpg',
 ];

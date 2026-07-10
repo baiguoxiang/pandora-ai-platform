@@ -170,12 +170,12 @@ const ContentPage = () => {
               <h3 className="text-xl font-semibold text-white mb-6">作品展示</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  { title: '科幻短剧《星际穿越》', type: '短剧', image: '/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
-                  { title: '动漫《未来城市》', type: '漫剧', image: '/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
-                  { title: '宣传片《AI时代》', type: '视频', image: '/images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
-                  { title: '插画《梦境》', type: '图片', image: '/images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
-                  { title: '纪录片《自然之美》', type: '视频', image: '/images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
-                  { title: '漫画《星际冒险》', type: '漫剧', image: '/images/platform-2.jpg', color: 'from-yellow-500 to-orange-400' },
+                  { title: '科幻短剧《星际穿越》', type: '短剧', image: 'images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '动漫《未来城市》', type: '漫剧', image: 'images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '宣传片《AI时代》', type: '视频', image: 'images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
+                  { title: '插画《梦境》', type: '图片', image: 'images/platform-2.jpg', color: 'from-purple-500 to-pink-400' },
+                  { title: '纪录片《自然之美》', type: '视频', image: 'images/platform-2.jpg', color: 'from-orange-500 to-red-400' },
+                  { title: '漫画《星际冒险》', type: '漫剧', image: 'images/platform-2.jpg', color: 'from-yellow-500 to-orange-400' },
                 ].map((item, index) => {
                   const [imageLoaded, setImageLoaded] = useState(true);
                   return (

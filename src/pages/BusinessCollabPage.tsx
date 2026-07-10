@@ -20,7 +20,7 @@ const BusinessCollabPage = () => {
       deadline: '30天',
       applicants: 23,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '2',
@@ -31,7 +31,7 @@ const BusinessCollabPage = () => {
       deadline: '60天',
       applicants: 15,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '3',
@@ -42,7 +42,7 @@ const BusinessCollabPage = () => {
       deadline: '15天',
       applicants: 31,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '4',
@@ -53,7 +53,7 @@ const BusinessCollabPage = () => {
       deadline: '45天',
       applicants: 18,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '5',
@@ -64,7 +64,7 @@ const BusinessCollabPage = () => {
       deadline: '20天',
       applicants: 28,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '6',
@@ -75,7 +75,7 @@ const BusinessCollabPage = () => {
       deadline: '30天',
       applicants: 22,
       status: 'active',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
   ];
 
@@ -87,7 +87,7 @@ const BusinessCollabPage = () => {
       client: '某电商平台',
       earnings: '25000',
       status: '进行中',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '2',
@@ -96,7 +96,7 @@ const BusinessCollabPage = () => {
       client: '某品牌方',
       earnings: '8000',
       status: '已完成',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '3',
@@ -105,7 +105,7 @@ const BusinessCollabPage = () => {
       client: '某电商主播',
       earnings: '12000',
       status: '进行中',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '4',
@@ -114,7 +114,7 @@ const BusinessCollabPage = () => {
       client: '某设计公司',
       earnings: '18000',
       status: '进行中',
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
   ];
 
@@ -126,7 +126,7 @@ const BusinessCollabPage = () => {
       company: '某科技公司',
       location: '北京',
       connections: 520,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '2',
@@ -135,7 +135,7 @@ const BusinessCollabPage = () => {
       company: '某电商平台',
       location: '上海',
       connections: 890,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '3',
@@ -144,7 +144,7 @@ const BusinessCollabPage = () => {
       company: '自由职业',
       location: '深圳',
       connections: 1200,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '4',
@@ -153,7 +153,7 @@ const BusinessCollabPage = () => {
       company: '某AI公司',
       location: '杭州',
       connections: 650,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '5',
@@ -162,7 +162,7 @@ const BusinessCollabPage = () => {
       company: '自营店铺',
       location: '广州',
       connections: 780,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
     {
       id: '6',
@@ -171,7 +171,7 @@ const BusinessCollabPage = () => {
       company: '某教育机构',
       location: '成都',
       connections: 430,
-      image: '/images/platform-6.jpg',
+      image: 'images/platform-6.jpg',
     },
   ];
 
