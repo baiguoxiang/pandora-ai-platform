@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { imageUrl } from '../utils/imageUrl';
 
 interface UserSegmentCardProps {
   title: string;
@@ -40,7 +41,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
       <div className="relative h-48 overflow-hidden">
         {imageLoaded && (
           <img
-            src={image}
+            src={imageUrl(image)}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             onError={() => setImageLoaded(false)}

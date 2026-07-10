@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
+import { imageUrl } from '../utils/imageUrl';
 
 interface PlatformCardProps {
   name: string;
@@ -40,7 +41,7 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
       <div className="relative h-40 overflow-hidden">
         {imageLoaded && (
           <img
-            src={image}
+            src={imageUrl(image)}
             alt={name}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             onError={() => setImageLoaded(false)}
