@@ -17,33 +17,34 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const gradientMap: Record<string, string> = {
-  'from-blue-600 to-blue-400': 'linear-gradient(to right, #2563EB, #3B82F6)',
-  'from-purple-600 to-purple-400': 'linear-gradient(to right, #7C3AED, #A855F7)',
-  'from-green-600 to-green-400': 'linear-gradient(to right, #16A34A, #22C55E)',
-  'from-blue-500 to-cyan-400': 'linear-gradient(to right, #3B82F6, #22D3EE)',
-  'from-pink-500 to-purple-400': 'linear-gradient(to right, #EC4899, #A855F7)',
-  'from-amber-500 to-orange-400': 'linear-gradient(to right, #F59E0B, #F97316)',
-  'from-green-500 to-emerald-400': 'linear-gradient(to right, #22C55E, #10B981)',
-  'from-rose-500 to-pink-400': 'linear-gradient(to right, #F43F5E, #EC4899)',
-  'from-indigo-500 to-violet-400': 'linear-gradient(to right, #6366F1, #8B5CF6)',
+  'from-blue-600 to-blue-400': 'linear-gradient(135deg, #2563EB, #3B82F6)',
+  'from-purple-600 to-purple-400': 'linear-gradient(135deg, #7C3AED, #A855F7)',
+  'from-green-600 to-green-400': 'linear-gradient(135deg, #16A34A, #22C55E)',
+  'from-blue-500 to-cyan-400': 'linear-gradient(135deg, #3B82F6, #22D3EE)',
+  'from-purple-500 to-pink-400': 'linear-gradient(135deg, #A855F7, #EC4899)',
+  'from-amber-500 to-orange-400': 'linear-gradient(135deg, #F59E0B, #F97316)',
+  'from-green-500 to-emerald-400': 'linear-gradient(135deg, #22C55E, #10B981)',
+  'from-rose-500 to-pink-400': 'linear-gradient(135deg, #F43F5E, #EC4899)',
+  'from-indigo-500 to-violet-400': 'linear-gradient(135deg, #6366F1, #8B5CF6)',
 };
 
 const getGradientColor = (color: string) => {
-  return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
+  return gradientMap[color] || 'linear-gradient(135deg, #6366F1, #8B5CF6)';
 };
 
 const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
+  const gradient = getGradientColor(color);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className={`relative h-48 bg-gradient-to-br ${color}`}>
+      <div className="relative h-48" style={{ background: gradient }}>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
       
       <div className="relative p-6">
         <h3 className="text-white text-lg font-bold mb-2">{title}</h3>
-        <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: getGradientColor(color), marginBottom: '12px' }} />
+        <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: gradient, marginBottom: '12px' }} />
         <p className="text-white/70 text-[8px] mb-6">{subtitle}</p>
 
         <ul className="space-y-3 mb-8">
@@ -61,7 +62,8 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
 
         <Link
           to="/register"
-          className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${color} text-white text-[8px] font-medium rounded-xl hover:opacity-90 transition-opacity`}
+          className="inline-flex items-center px-6 py-3 text-white text-[8px] font-medium rounded-xl hover:opacity-90 transition-opacity"
+          style={{ background: gradient }}
         >
           {cta}
         </Link>
