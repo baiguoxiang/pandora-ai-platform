@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { imageUrl } from '../utils/imageUrl';
 
 interface UserSegmentCardProps {
   title: string;
@@ -10,7 +9,6 @@ interface UserSegmentCardProps {
   features: string[];
   cta: string;
   color: string;
-  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {

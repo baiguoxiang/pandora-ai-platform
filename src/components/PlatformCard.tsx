@@ -1,13 +1,11 @@
 import { useState } from 'react';
 import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
-import { imageUrl } from '../utils/imageUrl';
 
 interface PlatformCardProps {
   name: string;
   description: string;
   icon: string;
   color: string;
-  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {

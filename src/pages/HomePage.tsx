@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Zap, Shield, Globe } from 'lucide-react';
 import PlatformCard from '../components/PlatformCard';
 import UserSegmentCard from '../components/UserSegmentCard';
-import { platforms, userSegments, heroImages } from '../data/mockData';
-import { imageUrl } from '../utils/imageUrl';
+import { platforms, userSegments } from '../data/mockData';
 
 const HomePage = () => {
   const [networkImageLoaded, setNetworkImageLoaded] = useState(true);
