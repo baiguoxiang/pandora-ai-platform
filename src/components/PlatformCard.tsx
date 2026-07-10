@@ -56,10 +56,6 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
       </div>
       
       <div className="relative p-6">
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-3`}>
-          <IconComponent className="w-6 h-6 text-white" />
-        </div>
-        
         <h3 className="text-white text-sm font-semibold mb-2">{name}</h3>
         <div style={{ width: '64px', height: '8px', borderRadius: '4px', background: getGradientColor(color), marginBottom: '12px' }} />
         <p className="text-white/70 text-[8px] leading-relaxed">{description}</p>
