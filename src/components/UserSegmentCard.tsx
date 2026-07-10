@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -9,7 +8,6 @@ interface UserSegmentCardProps {
   features: string[];
   cta: string;
   color: string;
-  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
@@ -19,6 +17,9 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 const gradientMap: Record<string, string> = {
+  'from-blue-600 to-blue-400': 'linear-gradient(to right, #2563EB, #3B82F6)',
+  'from-purple-600 to-purple-400': 'linear-gradient(to right, #7C3AED, #A855F7)',
+  'from-green-600 to-green-400': 'linear-gradient(to right, #16A34A, #22C55E)',
   'from-blue-500 to-cyan-400': 'linear-gradient(to right, #3B82F6, #22D3EE)',
   'from-pink-500 to-purple-400': 'linear-gradient(to right, #EC4899, #A855F7)',
   'from-amber-500 to-orange-400': 'linear-gradient(to right, #F59E0B, #F97316)',
@@ -31,24 +32,13 @@ const getGradientColor = (color: string) => {
   return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
 };
 
-const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
-  const [imageLoaded, setImageLoaded] = useState(true);
+const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color }: UserSegmentCardProps) => {
+  const IconComponent = iconMap[iconName] || User;
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className="relative h-48 overflow-hidden">
-        {imageLoaded && (
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={() => setImageLoaded(false)}
-          />
-        )}
-        {!imageLoaded && (
-          <div className={`w-full h-full bg-gradient-to-br ${color}`} />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      <div className={`relative h-48 bg-gradient-to-br ${color}`}>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
       
       <div className="relative p-6">

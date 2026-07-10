@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { ShoppingCart, Film, Wrench, Store, Users, Globe, LucideIcon } from 'lucide-react';
 
 interface PlatformCardProps {
@@ -6,7 +5,6 @@ interface PlatformCardProps {
   description: string;
   icon: string;
   color: string;
-  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
@@ -20,10 +18,10 @@ const iconMap: Record<string, LucideIcon> = {
 
 const gradientMap: Record<string, string> = {
   'from-blue-500 to-cyan-400': 'linear-gradient(to right, #3B82F6, #22D3EE)',
-  'from-pink-500 to-purple-400': 'linear-gradient(to right, #EC4899, #A855F7)',
-  'from-amber-500 to-orange-400': 'linear-gradient(to right, #F59E0B, #F97316)',
+  'from-purple-500 to-pink-400': 'linear-gradient(to right, #A855F7, #EC4899)',
   'from-green-500 to-emerald-400': 'linear-gradient(to right, #22C55E, #10B981)',
-  'from-rose-500 to-pink-400': 'linear-gradient(to right, #F43F5E, #EC4899)',
+  'from-orange-500 to-amber-400': 'linear-gradient(to right, #F97316, #F59E0B)',
+  'from-red-500 to-rose-400': 'linear-gradient(to right, #EF4444, #F43F5E)',
   'from-indigo-500 to-violet-400': 'linear-gradient(to right, #6366F1, #8B5CF6)',
 };
 
@@ -31,24 +29,13 @@ const getGradientColor = (color: string) => {
   return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
 };
 
-const PlatformCard = ({ name, description, icon: iconName, color, image }: PlatformCardProps) => {
-  const [imageLoaded, setImageLoaded] = useState(true);
+const PlatformCard = ({ name, description, icon: iconName, color }: PlatformCardProps) => {
+  const IconComponent = iconMap[iconName] || Globe;
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
-      <div className="relative h-40 overflow-hidden">
-        {imageLoaded && (
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            onError={() => setImageLoaded(false)}
-          />
-        )}
-        {!imageLoaded && (
-          <div className={`w-full h-full bg-gradient-to-br ${color}`} />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+      <div className={`relative h-40 bg-gradient-to-br ${color}`}>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
       
       <div className="relative p-6">
