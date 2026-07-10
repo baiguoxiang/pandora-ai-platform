@@ -160,7 +160,19 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden bg-gradient-to-br from-indigo-900/50 to-purple-900/50">
+                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
+                  {networkImageLoaded && (
+                    <img
+                      src="images/global-network.jpg"
+                      alt="全球AI网络"
+                      className="w-full h-full object-cover"
+                      onError={() => setNetworkImageLoaded(false)}
+                    />
+                  )}
+                  {!networkImageLoaded && (
+                    <div className="w-full h-full bg-gradient-to-br from-indigo-900/50 to-purple-900/50" />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/80 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 animate-float">

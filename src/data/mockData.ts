@@ -16,6 +16,7 @@ export interface Platform {
   description: string;
   icon: string;
   color: string;
+  image: string;
 }
 
 export interface UserSegment {
@@ -26,6 +27,7 @@ export interface UserSegment {
   features: string[];
   cta: string;
   color: string;
+  image: string;
 }
 
 export const aiModels: AIModel[] = [
@@ -126,6 +128,7 @@ export const platforms: Platform[] = [
     description: '聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户即可使用全球模型',
     icon: 'ShoppingCart',
     color: 'from-blue-500 to-cyan-400',
+    image: 'images/platform-1.jpg',
   },
   {
     id: '2',
@@ -133,6 +136,7 @@ export const platforms: Platform[] = [
     description: '从剧本生成到视频合成，一键完成AI短剧漫剧制作，分发全球',
     icon: 'Film',
     color: 'from-purple-500 to-pink-400',
+    image: 'images/platform-2.jpg',
   },
   {
     id: '3',
@@ -140,6 +144,7 @@ export const platforms: Platform[] = [
     description: '提供AI写作、翻译、编程等多种工具，提升工作效率',
     icon: 'Wrench',
     color: 'from-green-500 to-emerald-400',
+    image: 'images/platform-3.jpg',
   },
   {
     id: '4',
@@ -147,6 +152,7 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
+    image: 'images/platform-4.jpg',
   },
   {
     id: '5',
@@ -154,6 +160,7 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
+    image: 'images/platform-5.jpg',
   },
   {
     id: '6',
@@ -161,6 +168,7 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
+    image: 'images/platform-6.jpg',
   },
 ];
 
@@ -177,6 +185,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '立即创业',
     color: 'from-blue-600 to-blue-400',
+    image: 'images/segment-1.jpg',
   },
   {
     id: '2',
@@ -190,6 +199,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '企业服务',
     color: 'from-purple-600 to-purple-400',
+    image: 'images/segment-2.jpg',
   },
   {
     id: '3',
@@ -203,6 +213,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '合作洽谈',
     color: 'from-green-600 to-green-400',
+    image: 'images/segment-3.jpg',
   },
 ];
 

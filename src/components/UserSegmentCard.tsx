@@ -9,6 +9,7 @@ interface UserSegmentCardProps {
   features: string[];
   cta: string;
   color: string;
+  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
@@ -30,16 +31,24 @@ const getGradientColor = (color: string) => {
   return gradientMap[color] || 'linear-gradient(to right, #6366F1, #8B5CF6)';
 };
 
-const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color }: UserSegmentCardProps) => {
-  const IconComponent = iconMap[iconName] || User;
+const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
+  const [imageLoaded, setImageLoaded] = useState(true);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className={`relative h-48 overflow-hidden bg-gradient-to-br ${color}`}>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <IconComponent className="w-24 h-24 text-white/30" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+      <div className="relative h-48 overflow-hidden">
+        {imageLoaded && (
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            onError={() => setImageLoaded(false)}
+          />
+        )}
+        {!imageLoaded && (
+          <div className={`w-full h-full bg-gradient-to-br ${color}`} />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
       </div>
       
       <div className="relative p-6">
