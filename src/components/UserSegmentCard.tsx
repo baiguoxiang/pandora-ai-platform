@@ -38,7 +38,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className="relative h-48" style={{ background: gradient }}>
+      <div className="relative" style={{ height: '192px', background: gradient }}>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
       
