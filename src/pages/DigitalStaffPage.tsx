@@ -16,7 +16,7 @@ const DigitalStaffPage = () => {
       name: '小美',
       role: '电商主播',
       style: 'from-pink-500 to-rose-400',
-      image: '/pandora-ai-platform/images/platform-5.jpg',
+      image: 'images/platform-5.jpg',
       stats: { liveCount: 128, viewers: '50万+', sales: '200万+' },
     },
     {
@@ -24,7 +24,7 @@ const DigitalStaffPage = () => {
       name: '小智',
       role: '知识主播',
       style: 'from-blue-500 to-cyan-400',
-      image: '/pandora-ai-platform/images/platform-5.jpg',
+      image: 'images/platform-5.jpg',
       stats: { liveCount: 89, viewers: '30万+', sales: '150万+' },
     },
     {
@@ -32,7 +32,7 @@ const DigitalStaffPage = () => {
       name: '小薇',
       role: '娱乐主播',
       style: 'from-purple-500 to-violet-400',
-      image: '/pandora-ai-platform/images/platform-5.jpg',
+      image: 'images/platform-5.jpg',
       stats: { liveCount: 215, viewers: '80万+', sales: '350万+' },
     },
     {
@@ -40,7 +40,7 @@ const DigitalStaffPage = () => {
       name: '小宇',
       role: '游戏主播',
       style: 'from-green-500 to-emerald-400',
-      image: '/pandora-ai-platform/images/platform-5.jpg',
+      image: 'images/platform-5.jpg',
       stats: { liveCount: 156, viewers: '60万+', sales: '280万+' },
     },
   ];

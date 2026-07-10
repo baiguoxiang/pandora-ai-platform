@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, Zap, Shield, Globe } from 'lucide-react';
 import PlatformCard from '../components/PlatformCard';
 import UserSegmentCard from '../components/UserSegmentCard';
 import { platforms, userSegments, heroImages } from '../data/mockData';
+import { imageUrl } from '../utils/imageUrl';
 
 const HomePage = () => {
   const [networkImageLoaded, setNetworkImageLoaded] = useState(true);
@@ -163,7 +164,7 @@ const HomePage = () => {
                 <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
                   {networkImageLoaded && (
                     <img
-                      src="/pandora-ai-platform/images/global-network.jpg"
+                      src={imageUrl('images/global-network.jpg')}
                       alt="全球AI网络"
                       className="w-full h-full object-cover"
                       onError={() => setNetworkImageLoaded(false)}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ShoppingCart, Video, BarChart3, Globe, Sparkles, TrendingUp, DollarSign } from 'lucide-react';
 import { ecommerceFeatures } from '../data/mockData';
+import { imageUrl } from '../utils/imageUrl';
 
 const EcommercePage = () => {
   const [activeTab, setActiveTab] = useState('products');
@@ -13,10 +14,10 @@ const EcommercePage = () => {
   ];
 
   const products = [
-    { id: '1', name: '智能手表', category: '电子产品', price: 299, sales: 1258, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
-    { id: '2', name: '无线耳机', category: '电子产品', price: 199, sales: 2345, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
-    { id: '3', name: '便携充电宝', category: '数码配件', price: 89, sales: 5678, status: 'active', image: '/pandora-ai-platform/images/platform-4.jpg' },
-    { id: '4', name: '智能台灯', category: '智能家居', price: 159, sales: 892, status: 'draft', image: '/pandora-ai-platform/images/platform-4.jpg' },
+    { id: '1', name: '智能手表', category: '电子产品', price: 299, sales: 1258, status: 'active', image: 'images/platform-4.jpg' },
+    { id: '2', name: '无线耳机', category: '电子产品', price: 199, sales: 2345, status: 'active', image: 'images/platform-4.jpg' },
+    { id: '3', name: '便携充电宝', category: '数码配件', price: 89, sales: 5678, status: 'active', image: 'images/platform-4.jpg' },
+    { id: '4', name: '智能台灯', category: '智能家居', price: 159, sales: 892, status: 'draft', image: 'images/platform-4.jpg' },
   ];
 
   const liveStats = [
@@ -191,7 +192,7 @@ const EcommercePage = () => {
                             <div className="w-12 h-12 rounded-lg overflow-hidden bg-gradient-to-br from-orange-900/50 to-amber-900/50">
                               {imageLoaded && (
                                 <img 
-                                  src={product.image} 
+                                  src={imageUrl(product.image)} 
                                   alt={product.name} 
                                   className="w-full h-full object-cover" 
                                   onError={() => setImageLoaded(false)} 
