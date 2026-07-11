@@ -8,6 +8,7 @@ interface UserSegmentCardProps {
   features: string[];
   cta: string;
   color: string;
+  image: string;
 }
 
 const iconMap: Record<string, LucideIcon> = {
@@ -32,14 +33,23 @@ const getGradientColor = (color: string) => {
   return gradientMap[color] || 'linear-gradient(135deg, #6366F1, #8B5CF6)';
 };
 
-const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color }: UserSegmentCardProps) => {
+const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color, image }: UserSegmentCardProps) => {
   const IconComponent = iconMap[iconName] || User;
   const gradient = getGradientColor(color);
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className="relative" style={{ height: '192px', background: gradient }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      <div className="relative h-48">
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            (e.target as HTMLImageElement).style.display = 'none';
+            (e.target as HTMLImageElement).parentElement!.style.background = gradient;
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
       
       <div className="relative p-6">

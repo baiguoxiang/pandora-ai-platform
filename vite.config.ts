@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from "vite-tsconfig-paths";
 import tailwindcss from '@tailwindcss/vite';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
-// https://vite.dev/config/
 export default defineConfig({
   base: '/pandora-ai-platform/',
   server: {
@@ -12,6 +12,14 @@ export default defineConfig({
   },
   build: {
     sourcemap: 'hidden',
+    assetsInlineLimit: 100000000,
+    chunkSizeWarningLimit: 100000000,
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        inlineDynamicImports: true,
+      },
+    },
   },
   plugins: [
     react({
@@ -22,6 +30,7 @@ export default defineConfig({
       },
     }),
     tailwindcss(),
-    tsconfigPaths()
+    tsconfigPaths(),
+    viteSingleFile(),
   ],
 })

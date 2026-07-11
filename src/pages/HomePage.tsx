@@ -158,8 +158,17 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden" style={{ background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3))' }}>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/50 via-transparent to-transparent" />
+                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&h=600&fit=crop" 
+                    alt="全球AI网络" 
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                      (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3))';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/70 via-transparent to-transparent" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 animate-float">

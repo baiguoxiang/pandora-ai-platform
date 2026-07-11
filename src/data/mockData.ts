@@ -128,7 +128,7 @@ export const platforms: Platform[] = [
     description: '聚合全球所有AI大模型、图片、视频、音乐顶级模型，一个账户即可使用全球模型',
     icon: 'ShoppingCart',
     color: 'from-blue-500 to-cyan-400',
-    image: 'images/platform-1.jpg',
+    image: 'https://images.unsplash.com/photo-1677442136573-9299b733ca9a?w=400&h=300&fit=crop',
   },
   {
     id: '2',
@@ -136,7 +136,7 @@ export const platforms: Platform[] = [
     description: '从剧本生成到视频合成，一键完成AI短剧漫剧制作，分发全球',
     icon: 'Film',
     color: 'from-purple-500 to-pink-400',
-    image: 'images/platform-2.jpg',
+    image: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=300&fit=crop',
   },
   {
     id: '3',
@@ -144,7 +144,7 @@ export const platforms: Platform[] = [
     description: '提供AI写作、翻译、编程等多种工具，提升工作效率',
     icon: 'Wrench',
     color: 'from-green-500 to-emerald-400',
-    image: 'images/platform-3.jpg',
+    image: 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?w=400&h=300&fit=crop',
   },
   {
     id: '4',
@@ -152,7 +152,7 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
-    image: 'images/platform-4.jpg',
+    image: 'https://images.unsplash.com/photo-1595617795106-1354819a3649?w=400&h=300&fit=crop',
   },
   {
     id: '5',
@@ -160,7 +160,7 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
-    image: 'images/platform-5.jpg',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop',
   },
   {
     id: '6',
@@ -168,7 +168,7 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
-    image: 'images/platform-6.jpg',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
   },
 ];
 
@@ -185,7 +185,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '立即创业',
     color: 'from-blue-600 to-blue-400',
-    image: 'images/segment-1.jpg',
+    image: 'https://images.unsplash.com/photo-1507777855642-8287d508bffe?w=400&h=300&fit=crop',
   },
   {
     id: '2',
@@ -199,7 +199,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '企业服务',
     color: 'from-purple-600 to-purple-400',
-    image: 'images/segment-2.jpg',
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop',
   },
   {
     id: '3',
@@ -213,7 +213,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '合作洽谈',
     color: 'from-green-600 to-green-400',
-    image: 'images/segment-3.jpg',
+    image: 'https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=400&h=300&fit=crop',
   },
 ];
 
