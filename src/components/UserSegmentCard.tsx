@@ -1,5 +1,6 @@
 import { User, Building, Landmark, LucideIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { imageUrl } from '../utils/imageUrl';
 
 interface UserSegmentCardProps {
   title: string;
@@ -41,7 +42,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
       <div className="relative h-64">
         <img 
-          src={image} 
+          src={imageUrl(image)} 
           alt={title} 
           className="w-full h-full object-cover"
           onError={(e) => {
