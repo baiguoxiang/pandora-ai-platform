@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Shield, Globe } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import PlatformCard from '../components/PlatformCard';
 import UserSegmentCard from '../components/UserSegmentCard';
-import { platforms, userSegments } from '../data/mockData';
-import { imageUrl } from '../utils/imageUrl';
+import { platforms, userSegments, modelCarouselImages, advantages, systemLayers, ctaIcons } from '../data/mockData';
 
 const HomePage = () => {
   const stats = [
@@ -11,13 +10,6 @@ const HomePage = () => {
     { value: '10万+', label: '创业者' },
     { value: '100+', label: '国家地区' },
     { value: '99.9%', label: '服务可用性' },
-  ];
-
-  const advantages = [
-    { icon: Sparkles, title: '全球部署', desc: '多区域节点、低延迟高可用' },
-    { icon: Zap, title: '一站式集成', desc: '五大AI平台，一次接入全能力' },
-    { icon: Globe, title: '开放生态', desc: '支持开发者、伙伴、商家共创' },
-    { icon: Shield, title: '企业级安全', desc: '合规保障，数据隐私可控' },
   ];
 
   return (
@@ -29,29 +21,35 @@ const HomePage = () => {
           <div className="absolute top-0 left-0 w-[900px] h-[900px]" style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.6) 0%, rgba(139,92,246,0.4) 40%, rgba(236,72,153,0.2) 70%, transparent 100%)', filter: 'blur(120px)' }} />
           <div className="absolute top-1/4 right-0 w-[700px] h-[700px]" style={{ background: 'radial-gradient(circle, rgba(236,72,153,0.5) 0%, rgba(139,92,246,0.4) 50%, rgba(99,102,241,0.2) 80%, transparent 100%)', filter: 'blur(100px)' }} />
           <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.5) 0%, rgba(59,130,246,0.4) 50%, rgba(99,102,241,0.2) 80%, transparent 100%)', filter: 'blur(90px)' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px]" style={{ background: 'radial-gradient(circle, rgba(99,102,241,0.3) 0%, rgba(139,92,246,0.25) 40%, rgba(236,72,153,0.15) 70%, transparent 100%)', filter: 'blur(150px)' }} />
-          <div className="absolute top-1/4 right-1/4 w-[250px] h-[250px]" style={{ background: 'radial-gradient(circle, rgba(250,204,21,0.5) 0%, transparent 70%)', filter: 'blur(40px)' }} />
-          <div className="absolute bottom-1/4 left-1/4 w-[200px] h-[200px]" style={{ background: 'radial-gradient(circle, rgba(6,182,212,0.5) 0%, transparent 70%)', filter: 'blur(35px)' }} />
         </div>
 
         <div className="relative max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 z-20">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/10 mb-6">
-              <Sparkles className="w-4 h-4 text-yellow-400" />
-              <span className="text-white/70 text-[8px]">全球领先的AI创业平台</span>
+              <span className="text-white/70 text-[8px]">全球AI工具平台</span>
             </div>
             
-            <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight">
-                用AI重构你的
-                <span className="text-gradient"> 创业未来</span>
+            <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                潘多拉平台
               </h1>
+            </div>
+            
+            <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                链接全球AI模型 · 系统 · 商机
+              </h2>
+            </div>
+            
+            <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-3 border border-white/10 mb-8">
+              <p className="text-xs text-white/80 max-w-2xl">
+                赋能个人・服务企业・链接全球
+              </p>
             </div>
             
             <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-3 border border-white/10 mb-10">
               <p className="text-xs text-white/80 max-w-2xl">
-                潘多拉汇聚全球顶尖AI模型，提供一站式AI创业解决方案。
-                无论个人、企业还是政府，都能在这里找到适合的AI赋能路径。
+                汇聚全球OPC创业者，用AI赋能OPC创业者，链接全球商机和AIOPC创业生态平台
               </p>
             </div>
             
@@ -87,12 +85,40 @@ const HomePage = () => {
           <div className="text-center mb-12">
             <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-4">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                七大超级平台，覆盖AI创业全场景
+                已集成全球1000+顶级AI模型
+              </h2>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            {modelCarouselImages.map((image, index) => (
+              <div key={index} className="aspect-square rounded-xl overflow-hidden border border-white/10">
+                <img 
+                  src={image} 
+                  alt={`模型 ${index + 1}`} 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = 'none';
+                    (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))';
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-4">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white">
+                全球AI Token超市平台
               </h2>
             </div>
             <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10">
               <p className="text-white/70 text-xs max-w-2xl">
-                一套潘多拉平台，链接全球AI模型和系统，满足您的所有创业需求
+                聚合全球所有AI大模型，AI图片，AI视频，AI音乐顶级模型，一个账户就可以使用全球模型，支持API，比官方价格更优惠。
               </p>
             </div>
           </div>
@@ -113,11 +139,6 @@ const HomePage = () => {
                 为不同用户群体量身定制
               </h2>
             </div>
-            <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-2 border border-white/10">
-              <p className="text-white/70 text-xs max-w-2xl">
-                无论是个人创业者、企业还是政府，潘多拉都能提供专业的AI解决方案
-              </p>
-            </div>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -130,59 +151,100 @@ const HomePage = () => {
 
       <section className="py-16 lg:py-24">
         <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="bg-gradient-card backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-6">
-                  <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                    全球AI超级枢纽
-                  </h2>
-                </div>
-                <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-3 border border-white/10 mb-8">
-                  <p className="text-white/70 text-xs leading-relaxed">
-                    汇聚·输送·应用，一个平台打通从AI资源到全球生意的全链路。
-                    潘多拉将全球顶尖AI模型聚合在一起，为您提供最优质的AI能力支持。
-                  </p>
-                </div>
-                <div className="grid grid-cols-2 gap-6">
-                  {advantages.map((item) => (
-                    <div key={item.title} className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="text-white text-[8px] font-semibold mb-1">{item.title}</h4>
-                        <p className="text-white/60 text-[8px]">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="relative">
-                <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {advantages.map((item) => (
+              <div key={item.title} className="bg-gradient-card backdrop-blur-sm rounded-2xl p-6 border border-white/10 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-xl overflow-hidden">
                   <img 
-                    src="/pandora-ai-platform/images/global-network.jpg" 
-                    alt="全球AI网络" 
+                    src={item.icon} 
+                    alt={item.title} 
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none';
-                      (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.3))';
+                      (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/70 via-transparent to-transparent" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4 animate-float">
-                        <Globe className="w-12 h-12 text-white" />
+                </div>
+                <h4 className="text-white text-sm font-semibold mb-2">{item.title}</h4>
+                <p className="text-white/60 text-[8px]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 lg:py-24">
+        <div className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12">
+          {systemLayers.map((layer) => (
+            <div key={layer.id} className="bg-gradient-card backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-white/10 mb-8">
+              <div className="flex flex-col lg:flex-row gap-8 items-center">
+                <div className="flex items-center gap-6">
+                  <div className="w-20 h-20 rounded-xl overflow-hidden">
+                    <img 
+                      src={layer.icon} 
+                      alt={layer.title} 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))';
+                      }}
+                    />
+                  </div>
+                  <div className="w-16 h-16 rounded-xl overflow-hidden">
+                    <img 
+                      src={layer.numberIcon} 
+                      alt={`${layer.title}图标`} 
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                        (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))';
+                      }}
+                    />
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-white mb-2">{layer.title}</h3>
+                  <h4 className="text-white/80 text-sm mb-4">{layer.subtitle}</h4>
+                  <p className="text-white/60 text-xs mb-6 leading-relaxed">{layer.description}</p>
+                  
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    {layer.features.map((feature, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+                          <img 
+                            src={feature.icon} 
+                            alt={feature.name} 
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              (e.target as HTMLImageElement).style.display = 'none';
+                              (e.target as HTMLImageElement).parentElement!.style.background = 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))';
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <p className="text-white text-[8px] font-semibold">{feature.name}</p>
+                          {feature.desc && <p className="text-white/50 text-[6px] mt-1">{feature.desc}</p>}
+                        </div>
                       </div>
-                      <p className="text-white text-lg font-bold">连接全球</p>
-                      <p className="text-white text-xs">AI资源</p>
-                    </div>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center gap-2">
+                    <img 
+                      src={layer.arrowIcon} 
+                      alt="箭头" 
+                      className="w-8 h-8"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                    <span className="text-indigo-400 text-xs font-medium">{layer.cta}</span>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -191,14 +253,36 @@ const HomePage = () => {
           <div className="text-center">
             <div className="inline-block bg-black/40 backdrop-blur-md rounded-2xl px-6 py-4 border border-white/10 mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                准备好开启AI创业之旅了吗？
+                开始你的全球 AI创业之旅
               </h2>
             </div>
             <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-3 border border-white/10 mb-10">
               <p className="text-white/70 text-sm max-w-2xl">
-                立即注册，免费体验全球顶尖AI模型，开启您的创业新篇章
+                从今天起，用AI重构你的业务
               </p>
             </div>
+            <div className="inline-block bg-black/40 backdrop-blur-md rounded-xl px-6 py-3 border border-white/10 mb-10">
+              <p className="text-white/70 text-xs max-w-2xl">
+                汇聚全球OPC创业者，用AI赋能OPC创业者，链接全球商机和OPC创业生态平台
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap items-center justify-center gap-6 mb-12">
+              {ctaIcons.map((item, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  <img 
+                    src={item.icon} 
+                    alt={item.text} 
+                    className="w-8 h-8"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                  <span className="text-white text-xs">{item.text}</span>
+                </div>
+              ))}
+            </div>
+            
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/register"
