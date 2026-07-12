@@ -168,7 +168,7 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
-    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1551009175-15bdf9dcb580?w=400&h=300&fit=crop',
   },
 ];
 
