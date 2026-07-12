@@ -1,4 +1,4 @@
 export const imageUrl = (path: string) => {
-  const baseUrl = import.meta.env.BASE_URL || '/';
+  const baseUrl = '/pandora-ai-platform/';
   return baseUrl + path.replace(/^\//, '');
 };

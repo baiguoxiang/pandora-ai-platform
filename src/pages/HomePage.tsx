@@ -161,7 +161,7 @@ const HomePage = () => {
               <div className="relative">
                 <div className="relative w-full aspect-square max-w-lg mx-auto rounded-3xl overflow-hidden">
                   <img 
-                    src={imageUrl('images/global-network.jpg')} 
+                    src="/pandora-ai-platform/images/global-network.jpg" 
                     alt="全球AI网络" 
                     className="w-full h-full object-cover"
                     onError={(e) => {
