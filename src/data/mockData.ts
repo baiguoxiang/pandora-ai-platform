@@ -152,7 +152,7 @@ export const platforms: Platform[] = [
     description: 'AI赋能跨境电商，选品带货，一人卖向全球',
     icon: 'Store',
     color: 'from-orange-500 to-amber-400',
-    image: 'https://images.unsplash.com/photo-1595617795106-1354819a3649?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop',
   },
   {
     id: '5',
@@ -160,7 +160,7 @@ export const platforms: Platform[] = [
     description: '7x24小时数字人直播，智能客服，自动化运营',
     icon: 'Users',
     color: 'from-red-500 to-rose-400',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1616623723104-774bf54b1515?w=400&h=300&fit=crop',
   },
   {
     id: '6',
@@ -168,7 +168,7 @@ export const platforms: Platform[] = [
     description: '链接全球商机，承接AI订单，实现技能变现',
     icon: 'Globe',
     color: 'from-indigo-500 to-violet-400',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=400&h=300&fit=crop',
   },
 ];
 
@@ -185,7 +185,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '立即创业',
     color: 'from-blue-600 to-blue-400',
-    image: 'https://images.unsplash.com/photo-1507777855642-8287d508bffe?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop',
   },
   {
     id: '2',
@@ -199,7 +199,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '企业服务',
     color: 'from-purple-600 to-purple-400',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=400&h=300&fit=crop',
   },
   {
     id: '3',
@@ -213,7 +213,7 @@ export const userSegments: UserSegment[] = [
     ],
     cta: '合作洽谈',
     color: 'from-green-600 to-green-400',
-    image: 'https://images.unsplash.com/photo-1517732306149-e8f829eb588a?w=400&h=300&fit=crop',
+    image: 'https://images.unsplash.com/photo-1534185887489-641e14468b91?w=400&h=300&fit=crop',
   },
 ];
 
