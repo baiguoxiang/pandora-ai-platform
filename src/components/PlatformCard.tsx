@@ -36,7 +36,7 @@ const PlatformCard = ({ name, description, icon: iconName, color, image }: Platf
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 hover:-translate-y-2">
-      <div className="relative h-40">
+      <div className="relative h-64">
         <img 
           src={image} 
           alt={name} 

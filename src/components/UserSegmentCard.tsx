@@ -39,7 +39,7 @@ const UserSegmentCard = ({ title, subtitle, icon: iconName, features, cta, color
 
   return (
     <div className="group relative bg-gradient-card backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300">
-      <div className="relative h-48">
+      <div className="relative h-64">
         <img 
           src={image} 
           alt={title} 
